@@ -20,6 +20,7 @@
 - Confirmed time, location, and event copy for the general meeting and civility event.
 - Access to cabinet announcements, or a designated editor, to publish future events.
 - The revised general-meeting guidelines from the Co-Presidents.
+- Confirmation that the common application should be reopened or replaced. The supplied Google Form currently resolves to its closed-form screen; all application CTAs still point to that one requested URL.
 - The exact URL for the “Example Info Session Recording.” No recording link exists in the integrated source, so one was not invented.
 - Treasurer confirmation of every Fall 2026/Spring 2027 grant date. Current placeholders remain `TBD`.
 - A decision about personal officer emails versus `treasurer@thehua.org`; public pages currently use the role address, while the imported finance system retains its existing leadership contact data.
