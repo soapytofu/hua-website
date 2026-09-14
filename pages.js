@@ -20,12 +20,20 @@ window.HUA_PAGES = {
     intro: 'The Executive Team brings elected officers together to turn student priorities into coordinated action.',
     sections: [
       { title: 'Shared leadership', text: 'The team meets regularly, maintains accountability across projects, and carries student concerns into conversations with Harvard administrators.', stats: [['2', 'Co-Presidents'], ['8', 'Issue areas'], ['1', 'Student body']] },
-      { title: 'The Cabinet', text: 'Cabinet members support communications, advocacy, operations, community engagement, and organizational memory.', cards: [
-        { title: 'Chief of Staff', eyebrow: 'Operations', text: 'Coordinates priorities and keeps cross-team work moving.' },
-        { title: 'Community Liaison', eyebrow: 'Engagement', text: 'Strengthens relationships across the undergraduate community.' },
-        { title: 'Public Relations', eyebrow: 'Communications', text: 'Makes HUA work accessible and visible to students.' },
-        { title: 'Technology Coordinator', eyebrow: 'Digital', text: 'Supports the tools and systems behind HUA programs.' }
+      { title: 'The Cabinet', text: 'Cabinet members support communications, advocacy, operations, service, civic engagement, and organizational memory.', cards: [
+        { title: 'Jaden Lee', eyebrow: 'Chief of Staff' },
+        { title: 'Evan Epstein', eyebrow: 'Executive Vice President' },
+        { title: 'Angela Yang & Sophie Zeng', eyebrow: 'Co-VPs of Technology' },
+        { title: 'Luke Kim', eyebrow: 'VP of Photography' },
+        { title: 'Ryan Wang, Oliver Epstein & Marissa Gottman', eyebrow: 'Co-VPs of Social Media' },
+        { title: 'Matthew Tobin & Colin Chu', eyebrow: 'Co-VPs of Advocacy' },
+        { title: 'Kevin Wu & Vy Le', eyebrow: 'Co-VPs of Communications' },
+        { title: 'Eshaan Mani', eyebrow: 'VP of HUA History' },
+        { title: 'Melissa Chai & Sean Brady Merrill', eyebrow: 'Co-VPs of Service' },
+        { title: 'Joshua Lee & Sarah Anschell', eyebrow: 'Co-VPs of Civic Engagement' },
+        { title: 'Annabella Burton Boone', eyebrow: 'VP of Special Projects' }
       ]},
+      { title: 'Join the Cabinet', text: 'Cabinet applications are open through the official HUA application form.', cta: { label: 'Open the Cabinet application', href: 'https://docs.google.com/forms/d/e/1FAIpQLSdSa-5bn-3_Ip_K4-FT3SnUy1zojCZoDMzMN9W05UcMmMjdXQ/viewform?usp=dialog' } },
       { title: 'Get in touch', text: 'Questions for the Executive Team can be sent to copresidents@thehua.org.', cta: { label: 'Email the Co-Presidents', href: 'mailto:copresidents@thehua.org' } }
     ]
   },
@@ -45,21 +53,21 @@ window.HUA_PAGES = {
     title: 'Calendar', kicker: 'Meetings & events', image: '/assets/instagram-bg.webp',
     intro: 'HUA meetings are open to Harvard College undergraduates. Come listen, contribute, or connect with an officer.',
     sections: [
-      { title: 'What you’ll find', cards: [
-        { title: 'General meetings', eyebrow: 'Organization-wide', text: 'Updates, discussion, and time for students to bring forward campus concerns.' },
+      { title: 'Upcoming', cards: [
+        { title: 'HUA General Meeting', eyebrow: 'August 30, 2026 · 12–1 PM', text: 'Organization-wide updates, discussion, and time for students to bring forward campus concerns.', link: 'https://www.thehua.org/calendar/hua-general-meeting-3', label: 'View event details' },
         { title: 'Team meetings', eyebrow: 'Issue-focused', text: 'Working sessions for academics, residential life, social life, sports, well-being, and more.' },
         { title: 'Community events', eyebrow: 'Campus-wide', text: 'Information sessions, welcome events, and programs organized with student groups.' }
       ]},
-      { title: 'Planning a visit?', text: 'Meeting details and locations can change. Contact copresidents@thehua.org for the latest information.', cta: { label: 'Ask about a meeting', href: 'mailto:copresidents@thehua.org' } }
+      { title: 'Planning a visit?', text: 'Meeting details and locations can change. The official calendar has the latest schedule and event details.', cta: { label: 'View the live HUA calendar', href: 'https://www.thehua.org/calendar' } }
     ]
   },
   'governing-docs': {
     title: 'Governing Documents', kicker: 'Rules & accountability', image: '/assets/guides.webp',
     intro: 'The documents that define HUA’s responsibilities, decision-making practices, and standards for fair participation.',
     sections: [{ title: 'Document library', cards: [
-      { title: 'Constitution & Bylaws', eyebrow: 'Foundation', text: 'The organization’s authority, structure, responsibilities, and amendment process.' },
-      { title: 'General Meeting Guidelines', eyebrow: 'Participation', text: 'Shared expectations for accessible, productive, and accountable meetings.' },
-      { title: 'Election Commission Guidelines', eyebrow: 'Elections', text: 'Standards for administration, neutrality, candidate access, and dispute resolution.' }
+      { title: 'Constitution & Bylaws', eyebrow: 'Foundation', text: 'The organization’s authority, structure, responsibilities, and amendment process.', link: 'https://docs.google.com/document/d/1OkwkJenKI9kRywA1fZyyjdSipJ-oiVQ-Ub-R-Z6Cflc/edit?usp=sharing', label: 'Open document' },
+      { title: 'General Meeting Guidelines', eyebrow: 'Participation', text: 'Shared expectations for accessible, productive, and accountable meetings.', link: 'https://docs.google.com/document/d/1zJcbTh2pL_4tg29z_ozNi7WUUHkvQlgWqHcd4OxrZt4/edit?usp=sharing', label: 'Open document' },
+      { title: 'Election Commission Guidelines', eyebrow: 'Elections', text: 'Standards for administration, neutrality, candidate access, and dispute resolution.', link: 'https://docs.google.com/document/d/1Is-ab0PZwPB95tKRzkXSxD0X5EOCbGNx3NLc8UsE1pI/edit?usp=sharing', label: 'Open document' }
     ]}]
   },
   'hua-semesterly-grant-opening': {
@@ -79,6 +87,7 @@ window.HUA_PAGES = {
         { title: 'Respectful conduct', eyebrow: '02', text: 'Campaigns should focus on ideas and avoid harassment, misrepresentation, or disruption.' },
         { title: 'Transparent process', eyebrow: '03', text: 'Rules, decisions, and enforcement should be documented and communicated consistently.' }
       ]},
+      { title: 'Official regulations', text: 'Read the complete 2026 Spring Election campaign regulations before campaigning begins.', cta: { label: 'Open campaign regulations', href: 'https://docs.google.com/document/d/1Is-ab0PZwPB95tKRzkXSxD0X5EOCbGNx3NLc8UsE1pI/edit?usp=sharing' } },
       { title: 'Questions or concerns', text: 'Election questions should be directed to the appropriate HUA election administrators before campaigning begins.', cta: { label: 'Contact HUA', href: 'mailto:copresidents@thehua.org' } }
     ]
   },
@@ -86,9 +95,9 @@ window.HUA_PAGES = {
     title: 'Newsroom', kicker: 'Updates from HUA', image: '/assets/instagram-bg.webp',
     intro: 'News, program announcements, funding updates, and stories about student-led work across Harvard College.',
     sections: [{ title: 'Latest stories', cards: [
-      { title: 'HUA Weekly Newsletter', eyebrow: 'Newsletter', text: 'A concise roundup of opportunities, deadlines, events, and team updates.' },
+      { title: 'HUA Weekly Newsletter', eyebrow: 'Newsletter', text: 'A concise roundup of opportunities, deadlines, events, and team updates.', link: 'https://drive.google.com/file/d/1bdKR8wMzOG07lghaGy1wvrTUu3srCXjB/view?usp=sharing', label: 'Read the newsletter' },
       { title: 'Semesterly Grant Launch', eyebrow: 'Finance', text: 'What student organizations need to know before beginning a funding application.', link: '/club-funding/grant-information/', label: 'Read funding guidance' },
-      { title: 'What You Haven’t Heard', eyebrow: 'Campus impact', text: 'A look at the programs and partnerships happening behind the scenes.' }
+      { title: 'What You Haven’t Heard', eyebrow: 'Campus impact', text: 'A look at the programs and partnerships happening behind the scenes.', link: 'https://www.thehua.org/what-you-havent-heard', label: 'Read the stories' }
     ]}]
   },
   'teams-and-contacts': {
@@ -106,8 +115,8 @@ window.HUA_PAGES = {
     intro: 'Free professional clothing rentals help Harvard College students show up prepared for interviews, presentations, and career events.',
     sections: [
       { title: 'How it works', cards: [
-        { title: 'Browse', eyebrow: '01', text: 'Explore available sizes, colors, and professional styles.' },
-        { title: 'Reserve', eyebrow: '02', text: 'Schedule a time to visit, try on pieces, and choose what works.' },
+        { title: 'Browse', eyebrow: '01', text: 'Explore available sizes, colors, and professional styles.', link: 'https://www.thehua.org/crimson-career-closet-clothing', label: 'Preview the collection' },
+        { title: 'Reserve', eyebrow: '02', text: 'Schedule a time to visit, try on pieces, and choose what works.', link: 'https://app.squarespacescheduling.com/schedule.php?owner=28362411', label: 'Schedule an appointment' },
         { title: 'Return', eyebrow: '03', text: 'Bring items back in the same condition after a rental of up to two weeks.' }
       ]},
       { title: 'Questions & donations', text: 'The collection evolves throughout the year. For appointments, help, or clothing donations, email careercloset@thehua.org.', cta: { label: 'Email the closet team', href: 'mailto:careercloset@thehua.org' } }
@@ -117,16 +126,16 @@ window.HUA_PAGES = {
     title: 'Harvard Guides', kicker: 'Navigate campus', image: '/assets/guides.webp',
     intro: 'A practical starting point for finding the systems, spaces, and communities that shape undergraduate life.',
     sections: [{ title: 'Explore by topic', cards: [
-      { title: 'General resources', eyebrow: 'Start here', text: 'Common abbreviations, campus destinations, and everyday Harvard references.' },
-      { title: 'Academics', eyebrow: 'Learn', text: 'Course discovery, registration, reviews, advising, research, and study spaces.' },
-      { title: 'Clubs', eyebrow: 'Participate', text: 'Organization discovery, meeting spaces, and support for student-led activities.' },
-      { title: 'Campus life', eyebrow: 'Connect', text: 'Peer support, food, gathering places, well-being, and community resources.' }
+      { title: 'Harvard terms & acronyms', eyebrow: 'Start here', text: 'Common abbreviations, campus destinations, and everyday Harvard references.', link: 'https://college.harvard.edu/guides/harvard-terms-and-acronyms', label: 'Open the guide' },
+      { title: 'Courses & reviews', eyebrow: 'Learn', text: 'Register on my.harvard and use the Q Guide to learn from prior student feedback.', link: 'https://qreports.fas.harvard.edu/', label: 'Open the Q Guide' },
+      { title: 'Club meeting spaces', eyebrow: 'Participate', text: 'Find and reserve spaces for recognized student organizations.', link: 'https://roombook.harvard.edu/', label: 'Open RoomBook' },
+      { title: 'Study spaces', eyebrow: 'Connect', text: 'Find bookable and open spaces across the Harvard Library system.', link: 'https://library.harvard.edu/spaces', label: 'Find a space' }
     ]}, { title: 'Help improve this guide', text: 'Know a resource that should be included? Send your suggestion to copresidents@thehua.org.', cta: { label: 'Suggest a resource', href: 'mailto:copresidents@thehua.org' } }]
   },
   'hua-logos': {
     title: 'HUA Logos', kicker: 'Brand resources', image: '/assets/widener.webp',
     intro: 'A simple collection of HUA marks for approved reports, promotions, presentations, and funding materials.',
-    sections: [{ title: 'Logo collection', logos: ['Primary crimson', 'Black', 'Crimson field', 'Compact mark'] }, { title: 'Need another format?', text: 'Contact copresidents@thehua.org for usage guidance or a file type not shown here.', cta: { label: 'Request an asset', href: 'mailto:copresidents@thehua.org' } }]
+    sections: [{ title: 'Logo collection', logos: ['Primary crimson', 'Black', 'Crimson field', 'Compact mark'], cta: { label: 'Download the primary logo', href: '/assets/hua-logo.webp' } }, { title: 'Need another format?', text: 'Contact copresidents@thehua.org for usage guidance or a file type not shown here.', cta: { label: 'Request an asset', href: 'mailto:copresidents@thehua.org' } }]
   },
   finances: {
     title: 'Finances', kicker: 'Transparency', image: '/assets/structure.webp',
@@ -203,6 +212,10 @@ window.HUA_PAGES = {
     intro: 'Alumni support expands what student leaders can build—from inclusive community programs to practical resources and campus-wide initiatives.',
     sections: [
       { title: 'What support makes possible', stats: [['More', 'student-led programs'], ['Stronger', 'campus communities'], ['Lasting', 'undergraduate impact']] },
+      { title: 'Make a gift', text: 'Use Harvard’s secure giving form to support the HUA, or review the official instructions for additional ways to donate.', cards: [
+        { title: 'Donate online', eyebrow: 'Harvard giving', text: 'Make a secure gift through the Harvard Alumni community.', link: 'https://community.alumni.harvard.edu/give/16040771', label: 'Open the donation form' },
+        { title: 'Donation instructions', eyebrow: 'Other methods', text: 'Review the official HUA instructions for additional ways to contribute.', link: 'https://docs.google.com/document/d/1ZAxA66DyFPIzpNGL4f1An8t92VYj2vRkHWgT9-Pc1tY/edit?usp=sharing', label: 'Read the instructions' }
+      ]},
       { title: 'Thank you', text: 'HUA is grateful to alumni who help current and future students experiment, collaborate, and respond to emerging campus needs.', cta: { label: 'Contact HUA about giving', href: 'mailto:copresidents@thehua.org' } }
     ]
   }
