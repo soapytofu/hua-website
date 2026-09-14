@@ -54,11 +54,11 @@ window.HUA_PAGES = {
     intro: 'HUA meetings are open to Harvard College undergraduates. Come listen, contribute, or connect with an officer.',
     sections: [
       { title: 'Upcoming', cards: [
-        { title: 'HUA General Meeting', eyebrow: 'August 30, 2026 · 12–1 PM', text: 'Organization-wide updates, discussion, and time for students to bring forward campus concerns.', link: 'https://www.thehua.org/calendar/hua-general-meeting-3', label: 'View event details' },
+        { title: 'HUA General Meeting', eyebrow: 'August 30, 2026 · 12–1 PM', text: 'Organization-wide updates, discussion, and time for students to bring forward campus concerns.', link: '/calendar/', label: 'View event details' },
         { title: 'Team meetings', eyebrow: 'Issue-focused', text: 'Working sessions for academics, residential life, social life, sports, well-being, and more.' },
         { title: 'Community events', eyebrow: 'Campus-wide', text: 'Information sessions, welcome events, and programs organized with student groups.' }
       ]},
-      { title: 'Planning a visit?', text: 'Meeting details and locations can change. The official calendar has the latest schedule and event details.', cta: { label: 'View the live HUA calendar', href: 'https://www.thehua.org/calendar' } }
+      { title: 'Planning a visit?', text: 'Meeting details and locations can change. The rebuilt calendar has the latest schedule and event details.', cta: { label: 'View the HUA calendar', href: '/calendar/' } }
     ]
   },
   'governing-docs': {
@@ -97,7 +97,7 @@ window.HUA_PAGES = {
     sections: [{ title: 'Latest stories', cards: [
       { title: 'HUA Weekly Newsletter', eyebrow: 'Newsletter', text: 'A concise roundup of opportunities, deadlines, events, and team updates.', link: 'https://drive.google.com/file/d/1bdKR8wMzOG07lghaGy1wvrTUu3srCXjB/view?usp=sharing', label: 'Read the newsletter' },
       { title: 'Semesterly Grant Launch', eyebrow: 'Finance', text: 'What student organizations need to know before beginning a funding application.', link: '/club-funding/grant-information/', label: 'Read funding guidance' },
-      { title: 'What You Haven’t Heard', eyebrow: 'Campus impact', text: 'A look at the programs and partnerships happening behind the scenes.', link: 'https://www.thehua.org/what-you-havent-heard', label: 'Read the stories' }
+      { title: 'What You Haven’t Heard', eyebrow: 'Campus impact', text: 'A look at the programs and partnerships happening behind the scenes.' }
     ]}]
   },
   'teams-and-contacts': {
@@ -115,7 +115,7 @@ window.HUA_PAGES = {
     intro: 'Free professional clothing rentals help Harvard College students show up prepared for interviews, presentations, and career events.',
     sections: [
       { title: 'How it works', cards: [
-        { title: 'Browse', eyebrow: '01', text: 'Explore available sizes, colors, and professional styles.', link: 'https://www.thehua.org/crimson-career-closet-clothing', label: 'Preview the collection' },
+        { title: 'Browse', eyebrow: '01', text: 'Explore available sizes, colors, and professional styles.' },
         { title: 'Reserve', eyebrow: '02', text: 'Schedule a time to visit, try on pieces, and choose what works.', link: 'https://app.squarespacescheduling.com/schedule.php?owner=28362411', label: 'Schedule an appointment' },
         { title: 'Return', eyebrow: '03', text: 'Bring items back in the same condition after a rental of up to two weeks.' }
       ]},
