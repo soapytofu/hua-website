@@ -2,20 +2,21 @@
 
 import { useState, useEffect } from "react";
 import { Camera } from "lucide-react";
-import { DEFAULT_INSTAGRAM } from "@/lib/instagramConfig";
-import type { InstagramConfig } from "@/lib/instagramConfig";
+import type { DynamicInstagramFeed } from "@/lib/instagramFeed";
 
 export default function InstagramSection() {
-  const [config, setConfig] = useState<InstagramConfig | null>(null);
+  const [feed, setFeed] = useState<DynamicInstagramFeed | null>(null);
 
   useEffect(() => {
-    fetch("/api/admin/instagram")
+    fetch("/api/instagram/finance")
       .then((r) => r.ok ? r.json() : null)
-      .then((d) => { if (d) setConfig(d); })
+      .then((d: DynamicInstagramFeed | null) => { if (d?.posts?.length === 4) setFeed(d); })
       .catch(() => {});
   }, []);
 
-  const { handle, profileUrl, profileImageUrl, photos } = config ?? DEFAULT_INSTAGRAM;
+  const handle = feed?.handle ?? "@huafinance";
+  const profileUrl = feed?.profileUrl ?? "https://www.instagram.com/huafinance/";
+  const profileImageUrl = feed?.profileImageUrl;
 
   return (
     <section className="bg-white py-16 px-6 lg:px-8 border-t border-[#E8ECE7]">
@@ -60,22 +61,22 @@ export default function InstagramSection() {
 
         {/* Photo grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {config === null
+          {feed === null
             ? [0, 1, 2, 3].map((i) => (
                 <div key={i} className="aspect-square rounded-2xl bg-[#F5F8F2] animate-pulse" />
               ))
-            : photos.map((photo, i) => (
+            : feed.posts.map((post) => (
                 <a
-                  key={i}
-                  href={profileUrl}
+                  key={post.postUrl}
+                  href={post.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative aspect-square rounded-2xl overflow-hidden block"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={photo.imageUrl}
-                    alt={photo.alt}
+                    src={post.imageUrl}
+                    alt={post.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">

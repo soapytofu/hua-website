@@ -1,18 +1,12 @@
 import Link from "next/link";
 import HuaHeader from "@/components/hua/HuaHeader";
 import HuaFooter from "@/components/hua/HuaFooter";
+import HuaInstagramSection from "@/components/hua/HuaInstagramSection";
 
 const features = [
   { title: "Executive Team", text: "Meet the students leading HUA teams and connect with the right people.", image: "/hua-assets/executive.webp", href: "/executiveofficers" },
   { title: "Our Structure", text: "Find the many ways you can contribute to change-making on campus.", image: "/hua-assets/structure.webp", href: "/join" },
   { title: "Harvard Guides", text: "Navigate University and College resources, or suggest one we should add.", image: "/hua-assets/guides.webp", href: "/harvard-guides" },
-];
-
-const instagramPosts = [
-  { image: "/hua-assets/instagram-current-1.jpg", href: "https://www.instagram.com/theharvardua/p/DdP3UsDF25S/", alt: "HUA Welcome Festival recap" },
-  { image: "/hua-assets/instagram-current-2.jpg", href: "https://www.instagram.com/theharvardua/p/DdKk1NkKPJQ/", alt: "HUA General Meeting announcement" },
-  { image: "/hua-assets/instagram-current-3.jpg", href: "https://www.instagram.com/theharvardua/p/DdFXf3UGGGW/", alt: "HUA Civility Event recap" },
-  { image: "/hua-assets/instagram-current-4.jpg", href: "https://www.instagram.com/theharvardua/p/Dc6SuNRO_ry/", alt: "HUA Welcome Festival announcement" },
 ];
 
 export default function Home() {
@@ -48,13 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative isolate overflow-hidden bg-[url('/hua-assets/instagram-bg.webp')] bg-cover bg-center py-20 text-white">
-          <div className="absolute inset-0 -z-10 bg-black/70" />
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="flex items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-red-200">Follow along</p><h2 className="mt-2 font-serif text-5xl">Instagram</h2></div><a href="https://www.instagram.com/theharvardua/" target="_blank" rel="noopener noreferrer" className="font-semibold">@theharvardua ↗</a></div>
-            <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-4">{instagramPosts.map((post, index) => <a key={post.href} href={post.href} target="_blank" rel="noopener noreferrer" aria-label={`View HUA Instagram post ${index + 1}`}><img src={post.image} alt={post.alt} className="aspect-square w-full rounded-xl object-cover" /></a>)}</div>
-          </div>
-        </section>
+        <HuaInstagramSection />
 
         <section className="mx-auto max-w-6xl px-6 py-20">
           <p className="text-xs font-bold uppercase tracking-[.22em] text-[#a51c30]">Get involved</p><h2 className="mt-2 font-serif text-5xl text-[#45131d]">Take Part</h2>

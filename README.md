@@ -40,6 +40,15 @@ Optional public form overrides are `NEXT_PUBLIC_PAYMENT_FORM_URL`, `NEXT_PUBLIC_
 
 To enable Google Analytics, set `NEXT_PUBLIC_GA_ID` to the site’s GA4 measurement ID (for example, `G-XXXXXXXXXX`). Analytics scripts are omitted when the variable is unset.
 
+### Automatic Instagram feeds
+
+The homepage and Finance leadership page request the latest four posts through the server-side Instagram API and refresh their cached feed every 15 minutes. Configure the professional Instagram accounts with:
+
+- `INSTAGRAM_HUA_ACCESS_TOKEN` and `INSTAGRAM_HUA_USER_ID`
+- `INSTAGRAM_FINANCE_ACCESS_TOKEN` and `INSTAGRAM_FINANCE_USER_ID`
+
+Tokens are never sent to the browser. `INSTAGRAM_GRAPH_API_BASE_URL` can optionally override the default `https://graph.instagram.com` API host. If credentials are missing, expired, or the API is unavailable, each section automatically keeps showing its four configured fallback images.
+
 ## Route organization
 
 - Main HUA pages: `/`, `/executiveofficers`, `/calendar`, and the other public organization/resource routes

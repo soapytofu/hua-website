@@ -1230,7 +1230,7 @@ export default function AdminPage() {
             <div className="flex flex-col gap-6">
               <div>
                 <h2 className="text-xl font-bold text-[#222222]">Instagram Section</h2>
-                <p className="text-sm text-[#6b7280] mt-1">Update the handle, profile link, and the four photos shown on the Leadership page.</p>
+                <p className="text-sm text-[#6b7280] mt-1">Update the handle, profile link, and fallback photos shown if the automatic Instagram feed is unavailable.</p>
               </div>
               {instagramLoading ? (
                 <div className="flex items-center justify-center py-12">

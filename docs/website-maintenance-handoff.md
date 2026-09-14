@@ -13,6 +13,7 @@
 - Grant resources now follow one flow: funding overview, eligibility, preparation, application timing, receipts, and appeals/reapplication.
 - The current 2025–2026 Finance Guidelines are embedded from the official Google document. Airtable application destinations and the Receipts page were not changed.
 - Optional Google Analytics support is available through `NEXT_PUBLIC_GA_ID`.
+- Both HUA Instagram sections support automatic latest-post updates through server-only Meta API credentials, with a 15-minute cache and safe image fallbacks.
 
 ## Inputs or access still required
 
@@ -25,6 +26,7 @@
 - Treasurer confirmation of every Fall 2026/Spring 2027 grant date. Current placeholders remain `TBD`.
 - A decision about personal officer emails versus `treasurer@thehua.org`; public pages currently use the role address, while the imported finance system retains its existing leadership contact data.
 - The GA4 measurement ID and access to the deployment or GoDaddy DNS/hosting settings.
+- Meta Instagram API user IDs and long-lived access tokens for `@theharvardua` and `@huafinance`. Until configured in hosting, the automatic feed endpoints serve their fallback images.
 
 ## Operational follow-ups outside this repository
 
