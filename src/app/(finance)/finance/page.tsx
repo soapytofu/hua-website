@@ -54,7 +54,7 @@ export default function HomePage() {
   return (
     <>
       {/* ───── Hero ───── */}
-      <section className="relative min-h-screen flex flex-col justify-center pt-16 overflow-hidden">
+      <section className="relative min-h-[100svh] flex flex-col justify-center pt-16 overflow-hidden">
         {/* Background photo */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -63,12 +63,12 @@ export default function HomePage() {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10 py-32 text-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full relative z-10 py-20 sm:py-28 lg:py-32 text-center">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-white/80 text-xl font-medium mb-4"
+            className="text-white/80 text-lg sm:text-xl font-medium mb-4"
           >
             Welcome to the
           </motion.p>
@@ -77,7 +77,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-6xl sm:text-8xl md:text-9xl font-bold text-white tracking-tight leading-none whitespace-nowrap"
+            className="mx-auto max-w-6xl text-4xl min-[390px]:text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white tracking-tight leading-[0.95] text-balance"
           >
             HUA Finance Team
           </motion.h1>
@@ -86,7 +86,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="mt-5 text-white/70 text-xl font-medium"
+            className="mt-5 text-white/80 text-base sm:text-xl font-medium"
           >
             Harvard Undergraduate Association · Official Website
           </motion.p>
@@ -95,25 +95,25 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.55 }}
-            className="mt-10 flex flex-wrap justify-center gap-4"
+            className="mt-9 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
           >
             <Link
               href="/grant-application"
-              className="inline-flex items-center gap-2 bg-white text-[#1F5F0A] px-8 py-4 rounded-xl font-semibold text-base hover:bg-[#F5F8F2] transition-colors duration-200 shadow-lg"
+              className="inline-flex min-h-12 items-center justify-center gap-2 bg-white text-[#1F5F0A] px-7 py-3 rounded-xl font-semibold text-base hover:bg-[#F5F8F2] transition-colors duration-200 shadow-lg"
             >
               Apply for Funding
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/budget"
-              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-base border border-white/30 hover:bg-white/20 transition-colors duration-200"
+              className="inline-flex min-h-12 items-center justify-center gap-2 bg-white/10 text-white px-7 py-3 rounded-xl font-semibold text-base border border-white/30 hover:bg-white/20 transition-colors duration-200"
             >
               View Budget
             </Link>
           </motion.div>
 
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="mt-14 grid grid-cols-1 sm:mt-20 sm:grid-cols-3 gap-4">
             {stats.cards.map((card, i) => {
               const Icon = CARD_ICONS[i];
               return (

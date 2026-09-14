@@ -5,7 +5,7 @@ export default function FinanceLayout({ children }: { children: React.ReactNode 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main id="finance-main" className="flex-1">{children}</main>
       <Footer />
     </div>
   );

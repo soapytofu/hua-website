@@ -65,9 +65,9 @@ export default function InstagramSection() {
             ? [0, 1, 2, 3].map((i) => (
                 <div key={i} className="aspect-square rounded-2xl bg-[#F5F8F2] animate-pulse" />
               ))
-            : feed.posts.map((post) => (
+            : feed.posts.map((post, index) => (
                 <a
-                  key={post.postUrl}
+                  key={`${post.postUrl}-${index}`}
                   href={post.postUrl}
                   target="_blank"
                   rel="noopener noreferrer"

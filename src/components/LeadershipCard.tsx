@@ -65,12 +65,21 @@ export default function LeadershipCard({ leader, index = 0 }: LeadershipCardProp
       )}
 
       {/* + / × button — top right */}
-      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center transition-transform duration-200 group-hover:scale-110">
+      <button
+        type="button"
+        onClick={(event) => {
+          event.stopPropagation();
+          setExpanded((value) => !value);
+        }}
+        aria-expanded={expanded}
+        aria-label={`${expanded ? "Hide" : "Show"} details for ${leader.name}`}
+        className="absolute top-4 right-4 grid min-h-11 min-w-11 place-items-center rounded-full bg-white shadow-md transition-transform duration-200 group-hover:scale-110"
+      >
         {expanded
           ? <X className="w-4 h-4 text-[#222222]" />
           : <Plus className="w-4 h-4 text-[#222222]" />
         }
-      </div>
+      </button>
 
       {/* Hover-revealed info (truncated, hidden when expanded) */}
       <div className={cn(
@@ -102,7 +111,7 @@ export default function LeadershipCard({ leader, index = 0 }: LeadershipCardProp
 
       {/* Click-expanded full info — from top of card */}
       <div className={cn(
-        "absolute inset-x-5 top-16 flex flex-col gap-3 transition-all duration-300 pointer-events-none",
+        "absolute inset-x-5 bottom-24 top-16 flex flex-col gap-3 overflow-y-auto transition-all duration-300 pointer-events-none",
         expanded ? "opacity-100 pointer-events-auto" : "opacity-0"
       )}>
         {leader.bio && (
@@ -121,7 +130,7 @@ export default function LeadershipCard({ leader, index = 0 }: LeadershipCardProp
             onClick={(e) => e.stopPropagation()}
           >
             <Mail className="w-3.5 h-3.5 flex-shrink-0" />
-            <span>{leader.email}</span>
+            <span className="break-all">{leader.email}</span>
           </a>
         )}
       </div>

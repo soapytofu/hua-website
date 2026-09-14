@@ -11,8 +11,8 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle, badge }: PageHeaderProps) {
   return (
-    <section className="bg-white pt-32 pb-16 border-b border-[#E8ECE7]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="bg-white pt-28 pb-12 sm:pt-32 sm:pb-16 border-b border-[#E8ECE7]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ export default function PageHeader({ title, subtitle, badge }: PageHeaderProps) 
               {badge}
             </span>
           )}
-          <h1 className="text-4xl md:text-5xl font-bold text-[#222222] tracking-tight leading-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance text-[#222222] tracking-tight leading-tight max-w-3xl">
             {title}
           </h1>
           {subtitle && (

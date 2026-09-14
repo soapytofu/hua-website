@@ -38,7 +38,7 @@ const steps = [
 
 export default function Timeline() {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-clip px-1">
       {/* Vertical line — desktop */}
       <div className="hidden lg:block absolute left-1/2 -translate-x-px top-0 bottom-0 w-px bg-[#E8ECE7]" />
 
@@ -48,8 +48,8 @@ export default function Timeline() {
           return (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.05 }}
               className={`lg:flex lg:items-center lg:gap-8 ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"} lg:mb-12`}
@@ -57,7 +57,7 @@ export default function Timeline() {
               {/* Card */}
               <div className={`flex-1 ${isLeft ? "lg:text-right" : "lg:text-left"}`}>
                 <div
-                  className={`inline-block bg-white rounded-2xl border border-[#E8ECE7] shadow-sm p-6 text-left max-w-sm ${
+                  className={`block w-full bg-white rounded-2xl border border-[#E8ECE7] shadow-sm p-6 text-left max-w-sm ${
                     isLeft ? "lg:ml-auto" : ""
                   }`}
                 >

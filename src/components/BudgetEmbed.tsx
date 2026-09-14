@@ -40,7 +40,8 @@ export default function BudgetEmbed({
           </div>
 
           {/* Mock spreadsheet preview */}
-          <div className="mt-6 w-full max-w-lg rounded-xl overflow-hidden border border-[#E8ECE7] text-xs">
+          <div className="mt-6 w-full max-w-lg overflow-x-auto rounded-xl border border-[#E8ECE7] text-xs">
+            <div className="min-w-[34rem]">
             <div className="bg-[#1F5F0A] text-white grid grid-cols-4 gap-px">
               <div className="px-3 py-2 font-semibold">Organization</div>
               <div className="px-3 py-2 font-semibold">Category</div>
@@ -64,6 +65,7 @@ export default function BudgetEmbed({
                 <div className="px-3 py-2 text-[#1F5F0A] font-medium">{app}</div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       ) : (

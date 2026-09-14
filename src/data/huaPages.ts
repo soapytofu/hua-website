@@ -48,13 +48,13 @@ const OFFICER_IMAGES = {
 export const huaPages: Record<string, HuaPage> = {
   executiveofficers: {
     title: 'Executive Officers', kicker: 'Leadership', image: '/hua-assets/executive.webp',
-    intro: 'Meet the students elected to represent undergraduate priorities and lead the HUA’s work across campus.',
+    intro: 'Meet the students elected by the undergraduate student body to represent student priorities and lead the HUA for a one-year cycle.',
     sections: [
-      { title: 'Co-Presidents', text: 'The Co-Presidents set organization-wide priorities, coordinate the Executive Team, and represent students in conversations with College leadership.', cards: [
+      { title: 'Co-Presidents', text: 'The Co-Presidents set organization-wide priorities, coordinate the Executive Team, and represent students in regular conversations with College and University leadership.', cards: [
         { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach },
         { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.daniel }
       ]},
-      { title: 'Officers', text: 'Each officer leads a team focused on a major part of undergraduate life.', cards: [
+      { title: 'Officers', text: 'Each officer leads a team focused on a major part of undergraduate life and is accountable for that team’s effective work.', cards: [
         { title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake, link: '/finance-team', label: 'Finance Team' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.polina, link: '/finance-team', label: 'Finance Team' },
         { title: 'Maritella Petsa', eyebrow: 'Academic Life', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella, link: '/academic-team', label: 'Academic Team' }, { title: 'Asante Kiio', eyebrow: 'Social Life', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante, link: '/social-life-team', label: 'Social Life Team' },
         { title: 'Ella McRitchie', eyebrow: 'Sports', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella, link: '/sports-team', label: 'Sports Team' }, { title: 'Tess Sumner', eyebrow: 'Well-Being', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess, link: '/well-being-team', label: 'Well-Being Team' },
@@ -66,48 +66,80 @@ export const huaPages: Record<string, HuaPage> = {
   'academic-team': {
     title: 'Academic Life Team', kicker: 'Current officer', image: '/hua-assets/guides.webp',
     intro: 'The Academic Life Team advocates for a stronger, more navigable undergraduate academic experience.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Maritella Petsa', eyebrow: 'Academic Life Officer', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team works with the Office of Undergraduate Education, Academic Resource Center, Program in General Education, Office of Undergraduate Research and Fellowships, Office of International Education, Honor Council, Administrative Board, and Mignone Center for Career Success. It advocates for student interests, helps make academic grants and opportunities easier to navigate, and prepares student appointments to the Committee on Undergraduate Education.' },
+      { title: 'Team leadership', cards: [{ title: 'Maritella Petsa', eyebrow: 'Academic Life Officer', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'social-life-team': {
     title: 'Social Life Team', kicker: 'Current officer', image: '/hua-assets/instagram-bg.webp',
     intro: 'The Social Life Team builds inclusive opportunities for students to connect across campus.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Asante Kiio', eyebrow: 'Social Life Officer', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team creates inclusive social events and builds relationships with local businesses and community organizations. It works with House Committees, the College Events Board, the First-Year Social Committee, and other student groups, and partners with the Extracurriculars Team on student appointments to the Committee on Student Life.' },
+      { title: 'Team leadership', cards: [{ title: 'Asante Kiio', eyebrow: 'Social Life Officer', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'sports-team': {
     title: 'Sports Team', kicker: 'Current officer', image: '/hua-assets/widener.webp',
     intro: 'The Sports Team represents student priorities across athletics, recreation, and wellness through movement.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Ella McRitchie', eyebrow: 'Sports Officer', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team works with Harvard Athletics and House Committees to improve intramural, club, and varsity athletics for participants and spectators. Its remit includes equitable access to funding and facilities as well as programs that help more students participate in sports.' },
+      { title: 'Team leadership', cards: [{ title: 'Ella McRitchie', eyebrow: 'Sports Officer', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'well-being-team': {
     title: 'Well-Being Team', kicker: 'Current officer', image: '/hua-assets/improve.webp',
     intro: 'The Well-Being Team works on student mental, physical, and emotional well-being and access to support.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Tess Sumner', eyebrow: 'Well-Being Officer', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team helps students navigate emotional, mental, and physical health resources and advocates for accessible campus spaces. It works with offices including CAMHS, Harvard University Health Services, the Accessible Education Office, and the Office of Gender Equity, and supports student appointments to relevant advisory committees.' },
+      { title: 'Team leadership', cards: [{ title: 'Tess Sumner', eyebrow: 'Well-Being Officer', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'residential-life-team': {
     title: 'Residential Life Team', kicker: 'Current officer', image: '/hua-assets/meeting.webp',
     intro: 'The Residential Life Team advocates for students across houses, yards, dining, transportation, and campus living.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Finn Berard', eyebrow: 'Residential Life Officer', meta: 'residential-life@thehua.org', image: OFFICER_IMAGES.finn }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team works with Harvard University Dining Services, the First-Year Experience Office, the Dean of Students Office, and campus safety partners. It seeks solutions to issues affecting Houses and first-year residential communities and prepares student appointments to dining and safety committees.' },
+      { title: 'Team leadership', cards: [{ title: 'Finn Berard', eyebrow: 'Residential Life Officer', meta: 'residential-life@thehua.org', image: OFFICER_IMAGES.finn }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'extracurriculars-team': {
     title: 'Extracurriculars Team', kicker: 'Current officer', image: '/hua-assets/structure.webp',
     intro: 'The Extracurriculars Team supports student organizations and the communities they create.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Adam Han', eyebrow: 'Extracurriculars Officer', meta: 'extracurriculars@thehua.org', image: OFFICER_IMAGES.adam }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team supports the student-organization recognition process, helps groups navigate Dean of Students Office policies, and advocates for improvements when those processes create barriers. It partners with the Social Life Team on student appointments to the Committee on Student Life.' },
+      { title: 'Team leadership', cards: [{ title: 'Adam Han', eyebrow: 'Extracurriculars Officer', meta: 'extracurriculars@thehua.org', image: OFFICER_IMAGES.adam }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'inclusion-team': {
     title: 'Inclusion Team', kicker: 'Snap election pending', image: '/hua-assets/executive.webp',
     intro: 'The Inclusion Team helps students navigate identity-related resources and advances access, belonging, and inclusion across campus.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Officer TBD', eyebrow: 'Inclusion Officer', text: 'This role will be updated after snap elections.' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [
+      { title: 'What the team does', text: 'The team helps students navigate identity-related resources and works with the Office of Gender Equity, Harvard Foundation, Accessible Education Office, and other equity and belonging partners. It also supports student appointments to the Office of Gender Equity Student Advisory Committee.' },
+      { title: 'Team leadership', cards: [{ title: 'Officer TBD', eyebrow: 'Inclusion Officer', text: 'This role will be updated after snap elections.', meta: 'inclusion@thehua.org' }] },
+      { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }
+    ]
   },
   'finance-team': {
     title: 'Finance Team', kicker: 'Current officers', image: '/hua-assets/structure.webp',
     intro: 'The Finance Team administers student organization funding and supports transparent stewardship of HUA resources.',
-    sections: [{ title: 'Co-Treasurers', cards: [{ title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.polina }] }, { title: 'Finance resources', text: 'Funding guidance, applications, budgets, and reports are maintained in the integrated Finance section.', cta: { label: 'Open Finance & Funding', href: '/finance' } }]
+    sections: [
+      { title: 'What the team does', text: 'The team administers student-organization funding, maintains HUA financial records and required filings, and applies conflict-of-interest and financial-control standards. Team members receive financial training, and anyone with a financial stake in a decision must recuse themselves from that review.' },
+      { title: 'Co-Treasurers', cards: [{ title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.polina }] },
+      { title: 'Finance resources', text: 'Funding guidance, applications, budgets, and reports are maintained in the integrated Finance section.', cta: { label: 'Open Finance & Funding', href: '/finance' } }
+    ]
   },
   'executive-team': {
     title: 'Executive Team', kicker: 'How HUA works', image: '/hua-assets/structure.webp',
     intro: 'The Executive Team brings elected officers together to turn student priorities into coordinated action.',
     sections: [
-      { title: 'Shared leadership', text: 'The team meets regularly, maintains accountability across projects, and carries student concerns into conversations with Harvard administrators.', stats: [['2', 'Co-Presidents'], ['8', 'Issue areas'], ['1', 'Student body']] },
+      { title: 'Shared leadership', text: 'The Executive Team meets regularly, maintains accountability across projects, and carries student concerns into conversations with Harvard administrators. The Co-Presidents meet with senior College and University leaders, report back to the team, and work with officers to propose and approve each semester’s team budgets.', stats: [['2', 'Co-Presidents'], ['8', 'Issue areas'], ['1', 'Student body']] },
       { title: 'Co-Presidents', cards: [
         { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Office hours by appointment over email.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach },
         { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Office hours by appointment over email.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.daniel }
@@ -140,6 +172,7 @@ export const huaPages: Record<string, HuaPage> = {
     title: 'Join the HUA', kicker: 'Take a seat at the table', image: '/hua-assets/widener.webp',
     intro: 'Every Harvard College undergraduate can contribute. Choose an issue you care about, find a team, and help turn ideas into action.',
     sections: [
+      { title: 'Who can participate', text: 'Any Harvard College undergraduate can join HUA. Members may contribute to more than one team and work directly with the officer responsible for each issue area.' },
       { title: 'Three ways to start', cards: [
         { title: 'Join a team', eyebrow: '01', text: 'Work alongside students focused on academics, campus life, well-being, sports, or extracurriculars.', link: '/teams-and-contacts/', label: 'Meet the teams' },
         { title: 'Lead a solution', eyebrow: '02', text: 'Bring forward a problem, shape a plan, and organize a project with officer support.' },

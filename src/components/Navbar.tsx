@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -13,7 +14,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [desktopOpen, setDesktopOpen] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLLIElement>(null);
+  const desktopNavRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Navbar() {
   // Close desktop dropdown when clicking outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (desktopNavRef.current && !desktopNavRef.current.contains(e.target as Node)) {
         setDesktopOpen(null);
       }
     };
@@ -33,16 +34,36 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [mobileOpen]);
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0f2e04]">
-        <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#finance-main" className="sr-only z-[60] rounded-md bg-white px-4 py-3 font-semibold text-[#1F5F0A] focus:not-sr-only focus:absolute focus:left-4 focus:top-2">
+          Skip to main content
+        </a>
+        <nav className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Finance navigation">
           {/* Logo */}
           <div className="relative group h-16 flex items-center">
             <Link href="/finance" className="flex items-center gap-3">
-              <img
+              <Image
                 src="/logo.webp"
                 alt="HUA Finance"
+                width={40}
+                height={40}
+                loading="eager"
                 className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
               />
               <div className="hidden sm:block">
@@ -54,11 +75,13 @@ export default function Navbar() {
             {/* Brand hover dropdown — red HUA panel linking to main website */}
             <Link
               href="/"
-              className="absolute top-full left-0 w-full h-16 bg-[#A51C30] flex items-center gap-3 shadow-md border-t-2 border-white/60 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-150"
+              className="absolute top-full left-0 w-full h-16 bg-[#A51C30] flex items-center gap-3 shadow-md border-t-2 border-white/60 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-150"
             >
-              <img
+              <Image
                 src="/huamainlogo.png"
                 alt="HUA"
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-lg object-cover flex-shrink-0"
               />
               <div className="hidden sm:block">
@@ -69,17 +92,19 @@ export default function Navbar() {
           </div>
 
           {/* Desktop nav + CTA */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div ref={desktopNavRef} className="hidden lg:flex items-center gap-1">
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => {
               if (link.dropdown) {
                 const isAnyActive = link.dropdown.some((d) => pathname === d.href);
                 const isOpen = desktopOpen === link.label;
                 return (
-                  <li key={link.label} className="relative" ref={dropdownRef}>
+                  <li key={link.label} className="relative">
                     <button
                       type="button"
                       onClick={() => setDesktopOpen(isOpen ? null : link.label)}
+                      aria-expanded={isOpen}
+                      aria-haspopup="menu"
                       className={cn(
                         "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-150 cursor-pointer",
                         isAnyActive || isOpen
@@ -165,8 +190,10 @@ export default function Navbar() {
           {/* Hamburger (mobile only) */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
-            aria-label="Toggle menu"
+            className="lg:hidden grid min-h-11 min-w-11 place-items-center rounded-lg text-white hover:bg-white/10 transition-colors"
+            aria-label={mobileOpen ? "Close Finance menu" : "Open Finance menu"}
+            aria-controls="finance-mobile-menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -178,11 +205,12 @@ export default function Navbar() {
         {mobileOpen && (
           <motion.div
             key="mobile-menu"
+            id="finance-mobile-menu"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 z-40 bg-[#0f2e04] shadow-lg px-6 py-4 lg:hidden"
+            className="fixed inset-x-0 top-16 z-40 max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain bg-[#0f2e04] shadow-lg px-5 sm:px-6 py-4 lg:hidden"
           >
             <ul className="flex flex-col gap-1">
               {navLinks.map((link) => {
@@ -194,6 +222,7 @@ export default function Navbar() {
                       <button
                         type="button"
                         onClick={() => setMobileExpanded(isExpanded ? null : link.label)}
+                        aria-expanded={isExpanded}
                         className={cn(
                           "w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-colors cursor-pointer",
                           isAnyActive || isExpanded
