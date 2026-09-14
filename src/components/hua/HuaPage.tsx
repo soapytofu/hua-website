@@ -35,7 +35,7 @@ export default function HuaPage({ page }: { page: HuaPageData }) {
                 {section.text && <p className="mt-5 max-w-3xl text-base leading-7 text-neutral-700 sm:text-lg sm:leading-8">{section.text}</p>}
                 {section.cards && <div className={`mt-8 grid gap-5 sm:grid-cols-2 ${section.cardColumns === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>{section.cards.map((card) => (
                   <article key={`${card.title}-${card.eyebrow ?? ""}`} className="flex min-w-0 flex-col rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-                    {card.image && <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-2xl bg-[#eee8e2]"><Image src={card.image} alt={`${card.title}, ${card.eyebrow ?? "HUA officer"}`} width={750} height={1000} className={`w-full object-cover object-top ${section.cardColumns === 4 ? "aspect-[3/4]" : "aspect-[4/5]"}`} /></div>}
+                    {card.image && <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-2xl bg-[#eee8e2]"><Image src={card.image} alt={`${card.title}, ${card.eyebrow ?? "HUA officer"}`} width={750} height={1000} className={`w-full object-cover ${card.imageCrop === "close" ? "scale-125 object-[center_62%]" : "object-top"} ${section.cardColumns === 4 ? "aspect-[3/4]" : "aspect-[4/5]"}`} /></div>}
                     {card.eyebrow && <p className="text-xs font-bold uppercase tracking-[.18em] text-[#a51c30]">{card.eyebrow}</p>}
                     <h3 className="mt-2 font-serif text-2xl text-[#45131d]">{card.title}</h3>
                     {card.text && <p className="mt-3 leading-7 text-neutral-600">{card.text}</p>}

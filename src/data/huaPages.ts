@@ -4,6 +4,7 @@ export type HuaCard = {
   text?: string;
   meta?: string;
   image?: string;
+  imageCrop?: 'standard' | 'close';
   link?: string;
   label?: string;
 };
@@ -160,7 +161,7 @@ export const huaPages: Record<string, HuaPage> = {
         { title: 'Vy Le', eyebrow: 'Co-VP of Communications', image: OFFICER_IMAGES.vy },
         { title: 'Eshaan Mani', eyebrow: 'VP of HUA History', image: OFFICER_IMAGES.eshaan },
         { title: 'Melissa Chai', eyebrow: 'Co-VP of Service', image: OFFICER_IMAGES.melissa },
-        { title: 'Sean Brady Merrill', eyebrow: 'Co-VP of Service', image: OFFICER_IMAGES.sean },
+        { title: 'Sean Brady Merrill', eyebrow: 'Co-VP of Service', image: OFFICER_IMAGES.sean, imageCrop: 'close' },
         { title: 'Joshua Lee', eyebrow: 'Co-VP of Civic Engagement', image: OFFICER_IMAGES.joshua },
         { title: 'Sarah Anschell', eyebrow: 'Co-VP of Civic Engagement', image: OFFICER_IMAGES.sarah },
         { title: 'Annabella Burton Boone', eyebrow: 'VP of Special Projects', image: OFFICER_IMAGES.annabella }
