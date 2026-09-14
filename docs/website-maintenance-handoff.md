@@ -5,6 +5,7 @@
 - Home calendar CTA retained and linked to `/calendar`; Instagram tiles use the four newest public HUA posts captured on September 13, 2026.
 - Calendar cleared of old events and updated with the September 13 general meeting and the civility event. Unconfirmed times and locations are explicitly marked pending.
 - Current officer roster added across the executive, team, and contacts pages. Sports now lists Ella McRitchie; Inclusion is marked `Officer TBD` pending snap elections.
+- Approved portraits from the current HUA roster are stored locally and displayed for all 10 elected officers and all 18 cabinet members, including Annabella Burton Boone.
 - Every public team and cabinet application CTA uses the same common application. The 2022 handbook is removed from the Join page.
 - The stale general-meeting guidelines are no longer presented as current. The page directs visitors to request an updated copy from the Co-Presidents.
 - Fall 2026 grants are marked `coming soon`; all unconfirmed finance-cycle dates are `TBD`.
@@ -17,7 +18,6 @@
 
 ## Inputs or access still required
 
-- Annabella Burton Boone’s approved portrait.
 - Confirmed time, location, and event copy for the general meeting and civility event.
 - Access to cabinet announcements, or a designated editor, to publish future events.
 - The revised general-meeting guidelines from the Co-Presidents.

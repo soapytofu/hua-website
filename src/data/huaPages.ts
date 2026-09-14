@@ -3,6 +3,7 @@ export type HuaCard = {
   eyebrow?: string;
   text?: string;
   meta?: string;
+  image?: string;
   link?: string;
   label?: string;
 };
@@ -27,20 +28,37 @@ export type HuaPage = {
 
 const COMMON_APPLICATION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdSa-5bn-3_Ip_K4-FT3SnUy1zojCZoDMzMN9W05UcMmMjdXQ/viewform?usp=dialog';
 
+const OFFICER_IMAGES = {
+  zach: '/hua-assets/officers/zach-berg.webp', daniel: '/hua-assets/officers/daniel-zhao.webp',
+  jake: '/hua-assets/officers/jake-marino.webp', polina: '/hua-assets/officers/polina-krumkachev.webp',
+  maritella: '/hua-assets/officers/maritella-petsa.webp', asante: '/hua-assets/officers/asante-kiio.webp',
+  ella: '/hua-assets/officers/ella-mcritchie.webp', tess: '/hua-assets/officers/tess-sumner.webp',
+  finn: '/hua-assets/officers/finn-berard.webp', adam: '/hua-assets/officers/adam-han.webp',
+  jaden: '/hua-assets/officers/jaden-lee.webp', evan: '/hua-assets/officers/evan-epstein.webp',
+  angela: '/hua-assets/officers/angela-yang.webp', sophie: '/hua-assets/officers/sophie-zeng.webp',
+  luke: '/hua-assets/officers/luke-kim.webp', ryan: '/hua-assets/officers/ryan-wang.webp',
+  oliver: '/hua-assets/officers/oliver-epstein.webp', marissa: '/hua-assets/officers/marissa-gottman.webp',
+  matthew: '/hua-assets/officers/matthew-tobin.webp', colin: '/hua-assets/officers/colin-chu.webp',
+  kevin: '/hua-assets/officers/kevin-wu.webp', vy: '/hua-assets/officers/vy-le.webp',
+  eshaan: '/hua-assets/officers/eshaan-mani.webp', melissa: '/hua-assets/officers/melissa-chai.webp',
+  sean: '/hua-assets/officers/sean-brady-merrill.webp', joshua: '/hua-assets/officers/joshua-lee.webp',
+  sarah: '/hua-assets/officers/sarah-anschell.webp', annabella: '/hua-assets/officers/annabella-burton-boone.webp',
+} as const;
+
 export const huaPages: Record<string, HuaPage> = {
   executiveofficers: {
     title: 'Executive Officers', kicker: 'Leadership', image: '/hua-assets/executive.webp',
     intro: 'Meet the students elected to represent undergraduate priorities and lead the HUA’s work across campus.',
     sections: [
       { title: 'Co-Presidents', text: 'The Co-Presidents set organization-wide priorities, coordinate the Executive Team, and represent students in conversations with College leadership.', cards: [
-        { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org' },
-        { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org' }
+        { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach },
+        { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.daniel }
       ]},
       { title: 'Officers', text: 'Each officer leads a team focused on a major part of undergraduate life.', cards: [
-        { title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', link: '/finance-team', label: 'Finance Team' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', link: '/finance-team', label: 'Finance Team' },
-        { title: 'Maritella Petsa', eyebrow: 'Academic Life', meta: 'academics@thehua.org', link: '/academic-team', label: 'Academic Team' }, { title: 'Asante Kiio', eyebrow: 'Social Life', meta: 'social-life@thehua.org', link: '/social-life-team', label: 'Social Life Team' },
-        { title: 'Ella McRitchie', eyebrow: 'Sports', meta: 'sports@thehua.org', link: '/sports-team', label: 'Sports Team' }, { title: 'Tess Sumner', eyebrow: 'Well-Being', meta: 'well-being@thehua.org', link: '/well-being-team', label: 'Well-Being Team' },
-        { title: 'Finn Berard', eyebrow: 'Residential Life', meta: 'residential-life@thehua.org', link: '/residential-life-team', label: 'Residential Life Team' }, { title: 'Adam Han', eyebrow: 'Extracurriculars', meta: 'extracurriculars@thehua.org', link: '/extracurriculars-team', label: 'Extracurriculars Team' },
+        { title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake, link: '/finance-team', label: 'Finance Team' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.polina, link: '/finance-team', label: 'Finance Team' },
+        { title: 'Maritella Petsa', eyebrow: 'Academic Life', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella, link: '/academic-team', label: 'Academic Team' }, { title: 'Asante Kiio', eyebrow: 'Social Life', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante, link: '/social-life-team', label: 'Social Life Team' },
+        { title: 'Ella McRitchie', eyebrow: 'Sports', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella, link: '/sports-team', label: 'Sports Team' }, { title: 'Tess Sumner', eyebrow: 'Well-Being', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess, link: '/well-being-team', label: 'Well-Being Team' },
+        { title: 'Finn Berard', eyebrow: 'Residential Life', meta: 'residential-life@thehua.org', image: OFFICER_IMAGES.finn, link: '/residential-life-team', label: 'Residential Life Team' }, { title: 'Adam Han', eyebrow: 'Extracurriculars', meta: 'extracurriculars@thehua.org', image: OFFICER_IMAGES.adam, link: '/extracurriculars-team', label: 'Extracurriculars Team' },
         { title: 'Officer TBD', eyebrow: 'Inclusion', text: 'This role will be filled through snap elections.', link: '/inclusion-team', label: 'Inclusion Team' }
       ]}
     ]
@@ -48,32 +66,32 @@ export const huaPages: Record<string, HuaPage> = {
   'academic-team': {
     title: 'Academic Life Team', kicker: 'Current officer', image: '/hua-assets/guides.webp',
     intro: 'The Academic Life Team advocates for a stronger, more navigable undergraduate academic experience.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Maritella Petsa', eyebrow: 'Academic Life Officer', meta: 'academics@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Maritella Petsa', eyebrow: 'Academic Life Officer', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
   },
   'social-life-team': {
     title: 'Social Life Team', kicker: 'Current officer', image: '/hua-assets/instagram-bg.webp',
     intro: 'The Social Life Team builds inclusive opportunities for students to connect across campus.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Asante Kiio', eyebrow: 'Social Life Officer', meta: 'social-life@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Asante Kiio', eyebrow: 'Social Life Officer', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
   },
   'sports-team': {
     title: 'Sports Team', kicker: 'Current officer', image: '/hua-assets/widener.webp',
     intro: 'The Sports Team represents student priorities across athletics, recreation, and wellness through movement.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Ella McRitchie', eyebrow: 'Sports Officer', meta: 'sports@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Ella McRitchie', eyebrow: 'Sports Officer', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
   },
   'well-being-team': {
     title: 'Well-Being Team', kicker: 'Current officer', image: '/hua-assets/improve.webp',
     intro: 'The Well-Being Team works on student mental, physical, and emotional well-being and access to support.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Tess Sumner', eyebrow: 'Well-Being Officer', meta: 'well-being@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Tess Sumner', eyebrow: 'Well-Being Officer', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
   },
   'residential-life-team': {
     title: 'Residential Life Team', kicker: 'Current officer', image: '/hua-assets/meeting.webp',
     intro: 'The Residential Life Team advocates for students across houses, yards, dining, transportation, and campus living.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Finn Berard', eyebrow: 'Residential Life Officer', meta: 'residential-life@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Finn Berard', eyebrow: 'Residential Life Officer', meta: 'residential-life@thehua.org', image: OFFICER_IMAGES.finn }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
   },
   'extracurriculars-team': {
     title: 'Extracurriculars Team', kicker: 'Current officer', image: '/hua-assets/structure.webp',
     intro: 'The Extracurriculars Team supports student organizations and the communities they create.',
-    sections: [{ title: 'Team leadership', cards: [{ title: 'Adam Han', eyebrow: 'Extracurriculars Officer', meta: 'extracurriculars@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Adam Han', eyebrow: 'Extracurriculars Officer', meta: 'extracurriculars@thehua.org', image: OFFICER_IMAGES.adam }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
   },
   'inclusion-team': {
     title: 'Inclusion Team', kicker: 'Snap election pending', image: '/hua-assets/executive.webp',
@@ -83,25 +101,36 @@ export const huaPages: Record<string, HuaPage> = {
   'finance-team': {
     title: 'Finance Team', kicker: 'Current officers', image: '/hua-assets/structure.webp',
     intro: 'The Finance Team administers student organization funding and supports transparent stewardship of HUA resources.',
-    sections: [{ title: 'Co-Treasurers', cards: [{ title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org' }] }, { title: 'Finance resources', text: 'Funding guidance, applications, budgets, and reports are maintained in the integrated Finance section.', cta: { label: 'Open Finance & Funding', href: '/finance' } }]
+    sections: [{ title: 'Co-Treasurers', cards: [{ title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.polina }] }, { title: 'Finance resources', text: 'Funding guidance, applications, budgets, and reports are maintained in the integrated Finance section.', cta: { label: 'Open Finance & Funding', href: '/finance' } }]
   },
   'executive-team': {
     title: 'Executive Team', kicker: 'How HUA works', image: '/hua-assets/structure.webp',
     intro: 'The Executive Team brings elected officers together to turn student priorities into coordinated action.',
     sections: [
       { title: 'Shared leadership', text: 'The team meets regularly, maintains accountability across projects, and carries student concerns into conversations with Harvard administrators.', stats: [['2', 'Co-Presidents'], ['8', 'Issue areas'], ['1', 'Student body']] },
+      { title: 'Co-Presidents', cards: [
+        { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Office hours by appointment over email.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach },
+        { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Office hours by appointment over email.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.daniel }
+      ]},
       { title: 'The Cabinet', text: 'Cabinet members support communications, advocacy, operations, service, civic engagement, and organizational memory.', cards: [
-        { title: 'Jaden Lee', eyebrow: 'Chief of Staff' },
-        { title: 'Evan Epstein', eyebrow: 'Executive Vice President' },
-        { title: 'Angela Yang & Sophie Zeng', eyebrow: 'Co-VPs of Technology' },
-        { title: 'Luke Kim', eyebrow: 'VP of Photography' },
-        { title: 'Ryan Wang, Oliver Epstein & Marissa Gottman', eyebrow: 'Co-VPs of Social Media' },
-        { title: 'Matthew Tobin & Colin Chu', eyebrow: 'Co-VPs of Advocacy' },
-        { title: 'Kevin Wu & Vy Le', eyebrow: 'Co-VPs of Communications' },
-        { title: 'Eshaan Mani', eyebrow: 'VP of HUA History' },
-        { title: 'Melissa Chai & Sean Brady Merrill', eyebrow: 'Co-VPs of Service' },
-        { title: 'Joshua Lee & Sarah Anschell', eyebrow: 'Co-VPs of Civic Engagement' },
-        { title: 'Annabella Burton Boone', eyebrow: 'VP of Special Projects' }
+        { title: 'Jaden Lee', eyebrow: 'Chief of Staff', image: OFFICER_IMAGES.jaden },
+        { title: 'Evan Epstein', eyebrow: 'Executive Vice President', image: OFFICER_IMAGES.evan },
+        { title: 'Angela Yang', eyebrow: 'Co-VP of Technology', image: OFFICER_IMAGES.angela },
+        { title: 'Sophie Zeng', eyebrow: 'Co-VP of Technology', image: OFFICER_IMAGES.sophie },
+        { title: 'Luke Kim', eyebrow: 'VP of Photography', image: OFFICER_IMAGES.luke },
+        { title: 'Ryan Wang', eyebrow: 'Co-VP of Social Media', image: OFFICER_IMAGES.ryan },
+        { title: 'Oliver Epstein', eyebrow: 'Co-VP of Social Media', image: OFFICER_IMAGES.oliver },
+        { title: 'Marissa Gottman', eyebrow: 'Co-VP of Social Media', image: OFFICER_IMAGES.marissa },
+        { title: 'Matthew Tobin', eyebrow: 'Co-VP of Advocacy', image: OFFICER_IMAGES.matthew },
+        { title: 'Colin Chu', eyebrow: 'Co-VP of Advocacy', image: OFFICER_IMAGES.colin },
+        { title: 'Kevin Wu', eyebrow: 'Co-VP of Communications', image: OFFICER_IMAGES.kevin },
+        { title: 'Vy Le', eyebrow: 'Co-VP of Communications', image: OFFICER_IMAGES.vy },
+        { title: 'Eshaan Mani', eyebrow: 'VP of HUA History', image: OFFICER_IMAGES.eshaan },
+        { title: 'Melissa Chai', eyebrow: 'Co-VP of Service', image: OFFICER_IMAGES.melissa },
+        { title: 'Sean Brady Merrill', eyebrow: 'Co-VP of Service', image: OFFICER_IMAGES.sean },
+        { title: 'Joshua Lee', eyebrow: 'Co-VP of Civic Engagement', image: OFFICER_IMAGES.joshua },
+        { title: 'Sarah Anschell', eyebrow: 'Co-VP of Civic Engagement', image: OFFICER_IMAGES.sarah },
+        { title: 'Annabella Burton Boone', eyebrow: 'VP of Special Projects', image: OFFICER_IMAGES.annabella }
       ]},
       { title: 'Join the Cabinet', text: 'All HUA applications use one common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } },
       { title: 'Get in touch', text: 'Questions for the Executive Team can be sent to copresidents@thehua.org.', cta: { label: 'Email the Co-Presidents', href: 'mailto:copresidents@thehua.org' } }
@@ -166,10 +195,10 @@ export const huaPages: Record<string, HuaPage> = {
     title: 'Teams & Contacts', kicker: 'Find the right people', image: '/hua-assets/executive.webp',
     intro: 'Start with the issue area closest to your question. Every team welcomes thoughtful input from students.',
     sections: [{ title: 'HUA teams', cards: [
-      { title: 'Academic Life · Maritella Petsa', eyebrow: 'Courses & learning', meta: 'academics@thehua.org', link: '/academic-team', label: 'Team page' }, { title: 'Social Life · Asante Kiio', eyebrow: 'Campus connection', meta: 'social-life@thehua.org', link: '/social-life-team', label: 'Team page' },
-      { title: 'Sports · Ella McRitchie', eyebrow: 'Athletics & recreation', meta: 'sports@thehua.org', link: '/sports-team', label: 'Team page' }, { title: 'Well-Being · Tess Sumner', eyebrow: 'Student support', meta: 'well-being@thehua.org', link: '/well-being-team', label: 'Team page' },
-      { title: 'Residential Life · Finn Berard', eyebrow: 'Housing & community', meta: 'residential-life@thehua.org', link: '/residential-life-team', label: 'Team page' }, { title: 'Extracurriculars · Adam Han', eyebrow: 'Clubs & activities', meta: 'extracurriculars@thehua.org', link: '/extracurriculars-team', label: 'Team page' },
-      { title: 'Inclusion · Officer TBD', eyebrow: 'Snap election pending', link: '/inclusion-team', label: 'Team page' }, { title: 'Finance · Jake Marino & Polina Krumkachev', eyebrow: 'Funding & receipts', meta: 'treasurer@thehua.org', link: '/finance-team', label: 'Team page' }, { title: 'Executive Team', eyebrow: 'General inquiries', meta: 'copresidents@thehua.org' }
+      { title: 'Academic Life · Maritella Petsa', eyebrow: 'Courses & learning', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella, link: '/academic-team', label: 'Team page' }, { title: 'Social Life · Asante Kiio', eyebrow: 'Campus connection', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante, link: '/social-life-team', label: 'Team page' },
+      { title: 'Sports · Ella McRitchie', eyebrow: 'Athletics & recreation', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella, link: '/sports-team', label: 'Team page' }, { title: 'Well-Being · Tess Sumner', eyebrow: 'Student support', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess, link: '/well-being-team', label: 'Team page' },
+      { title: 'Residential Life · Finn Berard', eyebrow: 'Housing & community', meta: 'residential-life@thehua.org', image: OFFICER_IMAGES.finn, link: '/residential-life-team', label: 'Team page' }, { title: 'Extracurriculars · Adam Han', eyebrow: 'Clubs & activities', meta: 'extracurriculars@thehua.org', image: OFFICER_IMAGES.adam, link: '/extracurriculars-team', label: 'Team page' },
+      { title: 'Inclusion · Officer TBD', eyebrow: 'Snap election pending', link: '/inclusion-team', label: 'Team page' }, { title: 'Finance · Jake Marino & Polina Krumkachev', eyebrow: 'Funding & receipts', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake, link: '/finance-team', label: 'Team page' }, { title: 'Executive Team', eyebrow: 'General inquiries', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach }
     ]}]
   },
   'harvard-guides': {
