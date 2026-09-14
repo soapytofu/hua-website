@@ -13,8 +13,8 @@ export interface InstagramConfig {
 }
 
 export const DEFAULT_INSTAGRAM: InstagramConfig = {
-  handle: "@HUAFinance",
-  profileUrl: "https://www.instagram.com/HUAFinance",
+  handle: "@huafinance",
+  profileUrl: "https://www.instagram.com/huafinance/",
   profileImageUrl: "",
   photos: [
     { imageUrl: "/insta1.jpg",    alt: "HUA Finance Team at Annenberg" },

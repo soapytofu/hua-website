@@ -8,6 +8,13 @@ const features = [
   { title: "Harvard Guides", text: "Navigate University and College resources, or suggest one we should add.", image: "/hua-assets/guides.webp", href: "/harvard-guides" },
 ];
 
+const instagramPosts = [
+  { image: "/hua-assets/instagram-1.webp", href: "https://www.instagram.com/p/ClsZIEyu4if/" },
+  { image: "/hua-assets/instagram-2.webp", href: "https://www.instagram.com/p/ClpEJ57um6B/" },
+  { image: "/hua-assets/instagram-3.webp", href: "https://www.instagram.com/p/ClkPMeruvI6/" },
+  { image: "/hua-assets/instagram-4.webp", href: "https://www.instagram.com/p/Clg5h8Bu0Ew/" },
+];
+
 export default function Home() {
   return (
     <div className="bg-[#fffdf9] text-[#241f20]">
@@ -44,8 +51,8 @@ export default function Home() {
         <section className="relative isolate overflow-hidden bg-[url('/hua-assets/instagram-bg.webp')] bg-cover bg-center py-20 text-white">
           <div className="absolute inset-0 -z-10 bg-black/70" />
           <div className="mx-auto max-w-6xl px-6">
-            <div className="flex items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-red-200">Follow along</p><h2 className="mt-2 font-serif text-5xl">Instagram</h2></div><a href="https://www.instagram.com/theharvardua/" className="font-semibold">@theharvardua ↗</a></div>
-            <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-4">{[1,2,3,4].map((number) => <a key={number} href="https://www.instagram.com/theharvardua/"><img src={`/hua-assets/instagram-${number}.webp`} alt="HUA Instagram post" className="aspect-square w-full rounded-xl object-cover" /></a>)}</div>
+            <div className="flex items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-red-200">Follow along</p><h2 className="mt-2 font-serif text-5xl">Instagram</h2></div><a href="https://www.instagram.com/theharvardua/" target="_blank" rel="noopener noreferrer" className="font-semibold">@theharvardua ↗</a></div>
+            <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-4">{instagramPosts.map((post, index) => <a key={post.href} href={post.href} target="_blank" rel="noopener noreferrer" aria-label={`View HUA Instagram post ${index + 1}`}><img src={post.image} alt="HUA Instagram post" className="aspect-square w-full rounded-xl object-cover" /></a>)}</div>
           </div>
         </section>
 
