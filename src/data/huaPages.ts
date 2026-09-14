@@ -12,6 +12,7 @@ export type HuaSection = {
   title: string;
   text?: string;
   cards?: HuaCard[];
+  cardColumns?: 3 | 4;
   list?: string[];
   stats?: [string, string][];
   logos?: string[];
@@ -50,11 +51,11 @@ export const huaPages: Record<string, HuaPage> = {
     title: 'Executive Officers', kicker: 'Leadership', image: '/hua-assets/executive.webp',
     intro: 'Meet the students elected by the undergraduate student body to represent student priorities and lead the HUA for a one-year cycle.',
     sections: [
-      { title: 'Co-Presidents', text: 'The Co-Presidents set organization-wide priorities, coordinate the Executive Team, and represent students in regular conversations with College and University leadership.', cards: [
+      { title: 'Co-Presidents', text: 'The Co-Presidents set organization-wide priorities, coordinate the Executive Team, and represent students in regular conversations with College and University leadership.', cardColumns: 4, cards: [
         { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach },
         { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.daniel }
       ]},
-      { title: 'Officers', text: 'Each officer leads a team focused on a major part of undergraduate life and is accountable for that team’s effective work.', cards: [
+      { title: 'Officers', text: 'Each officer leads a team focused on a major part of undergraduate life and is accountable for that team’s effective work.', cardColumns: 4, cards: [
         { title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.jake, link: '/finance-team', label: 'Finance Team' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', image: OFFICER_IMAGES.polina, link: '/finance-team', label: 'Finance Team' },
         { title: 'Maritella Petsa', eyebrow: 'Academic Life', meta: 'academics@thehua.org', image: OFFICER_IMAGES.maritella, link: '/academic-team', label: 'Academic Team' }, { title: 'Asante Kiio', eyebrow: 'Social Life', meta: 'social-life@thehua.org', image: OFFICER_IMAGES.asante, link: '/social-life-team', label: 'Social Life Team' },
         { title: 'Ella McRitchie', eyebrow: 'Sports', meta: 'sports@thehua.org', image: OFFICER_IMAGES.ella, link: '/sports-team', label: 'Sports Team' }, { title: 'Tess Sumner', eyebrow: 'Well-Being', meta: 'well-being@thehua.org', image: OFFICER_IMAGES.tess, link: '/well-being-team', label: 'Well-Being Team' },
@@ -140,11 +141,11 @@ export const huaPages: Record<string, HuaPage> = {
     intro: 'The Executive Team brings elected officers together to turn student priorities into coordinated action.',
     sections: [
       { title: 'Shared leadership', text: 'The Executive Team meets regularly, maintains accountability across projects, and carries student concerns into conversations with Harvard administrators. The Co-Presidents meet with senior College and University leaders, report back to the team, and work with officers to propose and approve each semester’s team budgets.', stats: [['2', 'Co-Presidents'], ['8', 'Issue areas'], ['1', 'Student body']] },
-      { title: 'Co-Presidents', cards: [
+      { title: 'Co-Presidents', cardColumns: 4, cards: [
         { title: 'Zach Berg', eyebrow: 'Co-President', text: 'Office hours by appointment over email.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.zach },
         { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Office hours by appointment over email.', meta: 'copresidents@thehua.org', image: OFFICER_IMAGES.daniel }
       ]},
-      { title: 'The Cabinet', text: 'Cabinet members support communications, advocacy, operations, service, civic engagement, and organizational memory.', cards: [
+      { title: 'The Cabinet', text: 'Cabinet members support communications, advocacy, operations, service, civic engagement, and organizational memory.', cardColumns: 4, cards: [
         { title: 'Jaden Lee', eyebrow: 'Chief of Staff', image: OFFICER_IMAGES.jaden },
         { title: 'Evan Epstein', eyebrow: 'Executive Vice President', image: OFFICER_IMAGES.evan },
         { title: 'Angela Yang', eyebrow: 'Co-VP of Technology', image: OFFICER_IMAGES.angela },
