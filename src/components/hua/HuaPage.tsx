@@ -28,14 +28,14 @@ export default function HuaPage({ page }: { page: HuaPageData }) {
         </section>
         {page.sections.map((section, index) => (
           <section key={`${section.title}-${index}`} className={index % 2 ? "bg-[#f4eee9]" : "bg-[#fffdf9]"}>
-            <div className={`mx-auto grid gap-4 px-5 py-12 sm:px-6 sm:py-16 md:gap-7 ${section.cardColumns === 4 ? "max-w-[1440px]" : "max-w-6xl md:grid-cols-[80px_1fr]"}`}>
+            <div className={`mx-auto grid gap-4 px-4 py-12 sm:px-6 sm:py-16 ${section.cardColumns === 4 ? "max-w-[1600px]" : "max-w-6xl md:grid-cols-[80px_1fr] md:gap-7"}`}>
               <div className="text-sm font-bold tracking-[.2em] text-[#a51c30]">{String(index + 1).padStart(2, "0")}</div>
               <div>
                 <h2 className="font-serif text-3xl text-balance text-[#45131d] sm:text-4xl">{section.title}</h2>
                 {section.text && <p className="mt-5 max-w-3xl text-base leading-7 text-neutral-700 sm:text-lg sm:leading-8">{section.text}</p>}
-                {section.cards && <div className={`mt-8 grid gap-5 sm:grid-cols-2 ${section.cardColumns === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>{section.cards.map((card) => (
+                {section.cards && <div className={`mt-8 grid sm:grid-cols-2 ${section.cardColumns === 4 ? "gap-4 lg:grid-cols-4" : "gap-5 lg:grid-cols-3"}`}>{section.cards.map((card) => (
                   <article key={`${card.title}-${card.eyebrow ?? ""}`} className="flex min-w-0 flex-col rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-                    {card.image && <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-2xl bg-[#eee8e2]"><Image src={card.image} alt={`${card.title}, ${card.eyebrow ?? "HUA officer"}`} width={750} height={1000} className={`w-full object-cover ${card.imageCrop === "close" ? "scale-125 object-[center_62%]" : "object-top"} ${section.cardColumns === 4 ? "aspect-[3/4]" : "aspect-[4/5]"}`} /></div>}
+                    {card.image && <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-2xl bg-[#eee8e2]"><Image src={card.image} alt={`${card.title}, ${card.eyebrow ?? "HUA officer"}`} width={800} height={1200} className={`w-full object-cover ${card.imageCrop === "close" ? "scale-125 object-[center_62%]" : "object-top"} ${section.cardColumns === 4 ? "aspect-[2/3]" : "aspect-[4/5]"}`} /></div>}
                     {card.eyebrow && <p className="text-xs font-bold uppercase tracking-[.18em] text-[#a51c30]">{card.eyebrow}</p>}
                     <h3 className="mt-2 font-serif text-2xl text-[#45131d]">{card.title}</h3>
                     {card.text && <p className="mt-3 leading-7 text-neutral-600">{card.text}</p>}
