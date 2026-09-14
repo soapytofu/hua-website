@@ -5,7 +5,7 @@ import { huaPages } from "@/data/huaPages";
 
 const legacyFinanceRoutes: Record<string, string> = {
   finances: "/finance",
-  funding: "/resources",
+  funding: "/grant-information",
   "club-funding/grant-information": "/grant-information",
   "club-funding/grant-application": "/grant-application",
   "club-funding/receipts": "/receipts",

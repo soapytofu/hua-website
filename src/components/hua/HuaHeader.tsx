@@ -16,15 +16,14 @@ const groups = [
   {
     label: "Resources",
     links: [
-      ["Crimson Career Closet", "/crimson-career-closet"], ["Harvard Guides", "/harvard-guides"],
-      ["HUA Logos", "/hua-logos"],
+      ["Harvard Guides", "/harvard-guides"], ["HUA Logos", "/hua-logos"],
     ],
   },
 ];
 
 const singles = [
-  ["Elections", "/election-guidelines"], ["Newsroom", "/newsroom"],
-  ["Teams & Contacts", "/teams-and-contacts"], ["Donate", "/donations"],
+  ["Elections", "/election-guidelines"], ["Teams & Contacts", "/teams-and-contacts"],
+  ["Donate", "/donations"],
 ];
 
 export default function HuaHeader() {

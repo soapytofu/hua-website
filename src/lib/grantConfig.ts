@@ -11,8 +11,8 @@ export interface GrantConfig {
 }
 
 export const DEFAULT_GRANT_CONFIG: GrantConfig = {
-  semesterly: { name: "Semesterly Grant", available: true },
-  emergency: { name: "Emergency Grant", available: true },
+  semesterly: { name: "Fall 2026 Semesterly Grant — Coming Soon", available: false },
+  emergency: { name: "Emergency Grant — Dates TBD", available: false },
 };
 
 const CONFIG_KEY = "grant_config";

@@ -17,6 +17,7 @@ export const navLinks: NavLink[] = [
   {
     label: "Grant Information",
     dropdown: [
+      { label: "Funding Overview", href: "/grant-information" },
       { label: "Timeline", href: "/timeline" },
       { label: "Eligibility", href: "/eligibility" },
       { label: "Guidelines", href: "/guidelines" },

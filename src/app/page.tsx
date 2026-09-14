@@ -9,10 +9,10 @@ const features = [
 ];
 
 const instagramPosts = [
-  { image: "/hua-assets/instagram-1.webp", href: "https://www.instagram.com/p/ClsZIEyu4if/" },
-  { image: "/hua-assets/instagram-2.webp", href: "https://www.instagram.com/p/ClpEJ57um6B/" },
-  { image: "/hua-assets/instagram-3.webp", href: "https://www.instagram.com/p/ClkPMeruvI6/" },
-  { image: "/hua-assets/instagram-4.webp", href: "https://www.instagram.com/p/Clg5h8Bu0Ew/" },
+  { image: "/hua-assets/instagram-current-1.jpg", href: "https://www.instagram.com/theharvardua/p/DdP3UsDF25S/", alt: "HUA Welcome Festival recap" },
+  { image: "/hua-assets/instagram-current-2.jpg", href: "https://www.instagram.com/theharvardua/p/DdKk1NkKPJQ/", alt: "HUA General Meeting announcement" },
+  { image: "/hua-assets/instagram-current-3.jpg", href: "https://www.instagram.com/theharvardua/p/DdFXf3UGGGW/", alt: "HUA Civility Event recap" },
+  { image: "/hua-assets/instagram-current-4.jpg", href: "https://www.instagram.com/theharvardua/p/Dc6SuNRO_ry/", alt: "HUA Welcome Festival announcement" },
 ];
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
 
         <section className="bg-[#45131d] text-white">
           <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-14 sm:flex-row sm:items-center sm:justify-between">
-            <div><p className="text-xs font-bold uppercase tracking-[.22em] text-red-200">Campus life</p><h2 className="mt-2 font-serif text-4xl">Meetings & Events</h2><p className="mt-2 text-white/70">Latest listed event: HUA General Meeting · August 30, 2026 · 12–1 PM</p></div>
+            <div><p className="text-xs font-bold uppercase tracking-[.22em] text-red-200">Campus life</p><h2 className="mt-2 font-serif text-4xl">Meetings & Events</h2><p className="mt-2 text-white/70">HUA General Meeting · Sunday, September 13, 2026</p></div>
             <Link href="/calendar" className="rounded-full border border-white px-5 py-3 text-sm font-semibold">View calendar ↗</Link>
           </div>
         </section>
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="absolute inset-0 -z-10 bg-black/70" />
           <div className="mx-auto max-w-6xl px-6">
             <div className="flex items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase tracking-[.22em] text-red-200">Follow along</p><h2 className="mt-2 font-serif text-5xl">Instagram</h2></div><a href="https://www.instagram.com/theharvardua/" target="_blank" rel="noopener noreferrer" className="font-semibold">@theharvardua ↗</a></div>
-            <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-4">{instagramPosts.map((post, index) => <a key={post.href} href={post.href} target="_blank" rel="noopener noreferrer" aria-label={`View HUA Instagram post ${index + 1}`}><img src={post.image} alt="HUA Instagram post" className="aspect-square w-full rounded-xl object-cover" /></a>)}</div>
+            <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-4">{instagramPosts.map((post, index) => <a key={post.href} href={post.href} target="_blank" rel="noopener noreferrer" aria-label={`View HUA Instagram post ${index + 1}`}><img src={post.image} alt={post.alt} className="aspect-square w-full rounded-xl object-cover" /></a>)}</div>
           </div>
         </section>
 

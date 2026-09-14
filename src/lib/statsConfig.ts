@@ -12,7 +12,7 @@ export interface StatsConfig {
 
 export const DEFAULT_STATS: StatsConfig = {
   cards: [
-    { label: "Budget Allocated",       value: "$2.4M",   sub: "Academic year 2024–25" },
+    { label: "Budget Allocated",       value: "$2.4M",   sub: "Academic year: TBD" },
     { label: "Student Organizations",  value: "450+",    sub: "Funded this semester"  },
     { label: "Grant Applications",     value: "1,200+",  sub: "Processed annually"    },
   ],

@@ -38,6 +38,8 @@ Public pages render with built-in defaults. To enable Google authentication and 
 
 Optional public form overrides are `NEXT_PUBLIC_PAYMENT_FORM_URL`, `NEXT_PUBLIC_SUPPLEMENTAL_FORM_URL`, and `NEXT_PUBLIC_FUNDING_APPLICATION_URL`.
 
+To enable Google Analytics, set `NEXT_PUBLIC_GA_ID` to the site’s GA4 measurement ID (for example, `G-XXXXXXXXXX`). Analytics scripts are omitted when the variable is unset.
+
 ## Route organization
 
 - Main HUA pages: `/`, `/executiveofficers`, `/calendar`, and the other public organization/resource routes

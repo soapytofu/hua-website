@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 
 import { useState, useEffect, useRef } from "react";
-import { Download, FileText, Loader2 } from "lucide-react";
+import { Download, ExternalLink, FileText, Loader2 } from "lucide-react";
 
 export default function GuidelinesPdfViewer() {
   const [pdfDataUrl, setPdfDataUrl] = useState<string>("");
@@ -21,7 +21,7 @@ export default function GuidelinesPdfViewer() {
   }, []);
 
   useEffect(() => {
-    if (!pdfDataUrl) return;
+    if (!pdfDataUrl || pdfDataUrl.startsWith("http")) return;
     const base64 = pdfDataUrl.split(",")[1];
     if (!base64) return;
     const binary = atob(base64);
@@ -41,6 +41,8 @@ export default function GuidelinesPdfViewer() {
     a.download = "HUA_Finance_Guidelines.pdf";
     a.click();
   };
+
+  const externalDocument = pdfDataUrl.startsWith("http");
 
   if (loading) {
     return (
@@ -78,19 +80,21 @@ export default function GuidelinesPdfViewer() {
         {/* Toolbar */}
         <div className="flex items-center justify-between">
           <p className="text-sm text-[#6b7280] font-medium">HUA Finance Guidelines · Fiscal Year 2025–2026</p>
-          <button
-            onClick={handleDownload}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1F5F0A] text-white text-sm font-semibold hover:bg-[#174508] transition-colors"
-          >
-            <Download className="w-4 h-4" />
-            Download PDF
-          </button>
+          {externalDocument ? (
+            <a href={pdfDataUrl.replace("/preview", "/edit?usp=sharing")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1F5F0A] text-white text-sm font-semibold hover:bg-[#174508] transition-colors">
+              <ExternalLink className="w-4 h-4" /> Open Guidelines
+            </a>
+          ) : (
+            <button onClick={handleDownload} className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1F5F0A] text-white text-sm font-semibold hover:bg-[#174508] transition-colors">
+              <Download className="w-4 h-4" /> Download PDF
+            </button>
+          )}
         </div>
 
         {/* Inline viewer */}
         <div className="rounded-2xl border border-[#E8ECE7] overflow-hidden shadow-sm">
           <iframe
-            src={blobUrl}
+            src={externalDocument ? pdfDataUrl : blobUrl}
             className="w-full"
             style={{ height: "85vh", minHeight: 600 }}
             title="HUA Finance Guidelines"

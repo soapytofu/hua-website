@@ -1,10 +1,12 @@
 import { Redis } from "@upstash/redis";
 
 export interface GuidelinesConfig {
-  pdfUrl: string; // base64 data URL
+  pdfUrl: string; // base64 PDF data URL or an official external document URL
 }
 
-export const DEFAULT_GUIDELINES: GuidelinesConfig = { pdfUrl: "" };
+export const DEFAULT_GUIDELINES: GuidelinesConfig = {
+  pdfUrl: "https://docs.google.com/document/d/1tSyPoyGRZW6guvn350uiaZcWsh3Y75PIsEM__ggp_ig/preview",
+};
 
 const GUIDELINES_KEY = "guidelines_config";
 

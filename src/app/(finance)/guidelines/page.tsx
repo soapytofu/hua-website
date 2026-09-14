@@ -64,7 +64,7 @@ const faqItems: FAQItem[] = [
         <p>Yes! But...</p>
         <p><strong>The HUA restricts student organizations from applying for Semesterly and Emergency grant funding simultaneously.</strong></p>
         <p>
-          For example, you cannot submit a Fall 2024 Semesterly grant application and an emergency grant application within a month of the deadline for the Semesterly grant application.
+          For example, you cannot submit a semesterly grant application and an emergency grant application within a month of the semesterly deadline.
         </p>
       </div>
     ),

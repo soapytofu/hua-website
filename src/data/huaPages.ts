@@ -25,6 +25,8 @@ export type HuaPage = {
   sections: HuaSection[];
 };
 
+const COMMON_APPLICATION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdSa-5bn-3_Ip_K4-FT3SnUy1zojCZoDMzMN9W05UcMmMjdXQ/viewform?usp=dialog';
+
 export const huaPages: Record<string, HuaPage> = {
   executiveofficers: {
     title: 'Executive Officers', kicker: 'Leadership', image: '/hua-assets/executive.webp',
@@ -35,12 +37,53 @@ export const huaPages: Record<string, HuaPage> = {
         { title: 'Daniel Zhao', eyebrow: 'Co-President', text: 'Organization-wide leadership and student advocacy.', meta: 'copresidents@thehua.org' }
       ]},
       { title: 'Officers', text: 'Each officer leads a team focused on a major part of undergraduate life.', cards: [
-        { title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org' },
-        { title: 'Maritella Petsa', eyebrow: 'Academic Life', meta: 'academics@thehua.org' }, { title: 'Asante Kiio', eyebrow: 'Social Life', meta: 'social-life@thehua.org' },
-        { title: 'Ella McRitchie', eyebrow: 'Sports', meta: 'sports@thehua.org' }, { title: 'Tess Sumner', eyebrow: 'Well-Being', meta: 'well-being@thehua.org' },
-        { title: 'Finn Berard', eyebrow: 'Residential Life', meta: 'residential-life@thehua.org' }, { title: 'Adam Han', eyebrow: 'Extracurriculars', meta: 'extracurriculars@thehua.org' }
+        { title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', link: '/finance-team', label: 'Finance Team' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org', link: '/finance-team', label: 'Finance Team' },
+        { title: 'Maritella Petsa', eyebrow: 'Academic Life', meta: 'academics@thehua.org', link: '/academic-team', label: 'Academic Team' }, { title: 'Asante Kiio', eyebrow: 'Social Life', meta: 'social-life@thehua.org', link: '/social-life-team', label: 'Social Life Team' },
+        { title: 'Ella McRitchie', eyebrow: 'Sports', meta: 'sports@thehua.org', link: '/sports-team', label: 'Sports Team' }, { title: 'Tess Sumner', eyebrow: 'Well-Being', meta: 'well-being@thehua.org', link: '/well-being-team', label: 'Well-Being Team' },
+        { title: 'Finn Berard', eyebrow: 'Residential Life', meta: 'residential-life@thehua.org', link: '/residential-life-team', label: 'Residential Life Team' }, { title: 'Adam Han', eyebrow: 'Extracurriculars', meta: 'extracurriculars@thehua.org', link: '/extracurriculars-team', label: 'Extracurriculars Team' },
+        { title: 'Officer TBD', eyebrow: 'Inclusion', text: 'This role will be filled through snap elections.', link: '/inclusion-team', label: 'Inclusion Team' }
       ]}
     ]
+  },
+  'academic-team': {
+    title: 'Academic Life Team', kicker: 'Current officer', image: '/hua-assets/guides.webp',
+    intro: 'The Academic Life Team advocates for a stronger, more navigable undergraduate academic experience.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Maritella Petsa', eyebrow: 'Academic Life Officer', meta: 'academics@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'social-life-team': {
+    title: 'Social Life Team', kicker: 'Current officer', image: '/hua-assets/instagram-bg.webp',
+    intro: 'The Social Life Team builds inclusive opportunities for students to connect across campus.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Asante Kiio', eyebrow: 'Social Life Officer', meta: 'social-life@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'sports-team': {
+    title: 'Sports Team', kicker: 'Current officer', image: '/hua-assets/widener.webp',
+    intro: 'The Sports Team represents student priorities across athletics, recreation, and wellness through movement.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Ella McRitchie', eyebrow: 'Sports Officer', meta: 'sports@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'well-being-team': {
+    title: 'Well-Being Team', kicker: 'Current officer', image: '/hua-assets/improve.webp',
+    intro: 'The Well-Being Team works on student mental, physical, and emotional well-being and access to support.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Tess Sumner', eyebrow: 'Well-Being Officer', meta: 'well-being@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'residential-life-team': {
+    title: 'Residential Life Team', kicker: 'Current officer', image: '/hua-assets/meeting.webp',
+    intro: 'The Residential Life Team advocates for students across houses, yards, dining, transportation, and campus living.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Finn Berard', eyebrow: 'Residential Life Officer', meta: 'residential-life@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'extracurriculars-team': {
+    title: 'Extracurriculars Team', kicker: 'Current officer', image: '/hua-assets/structure.webp',
+    intro: 'The Extracurriculars Team supports student organizations and the communities they create.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Adam Han', eyebrow: 'Extracurriculars Officer', meta: 'extracurriculars@thehua.org' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'inclusion-team': {
+    title: 'Inclusion Team', kicker: 'Snap election pending', image: '/hua-assets/executive.webp',
+    intro: 'The Inclusion Team helps students navigate identity-related resources and advances access, belonging, and inclusion across campus.',
+    sections: [{ title: 'Team leadership', cards: [{ title: 'Officer TBD', eyebrow: 'Inclusion Officer', text: 'This role will be updated after snap elections.' }] }, { title: 'Join the team', text: 'All HUA team applications use the common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } }]
+  },
+  'finance-team': {
+    title: 'Finance Team', kicker: 'Current officers', image: '/hua-assets/structure.webp',
+    intro: 'The Finance Team administers student organization funding and supports transparent stewardship of HUA resources.',
+    sections: [{ title: 'Co-Treasurers', cards: [{ title: 'Jake Marino', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org' }, { title: 'Polina Krumkachev', eyebrow: 'Co-Treasurer', meta: 'treasurer@thehua.org' }] }, { title: 'Finance resources', text: 'Funding guidance, applications, budgets, and reports are maintained in the integrated Finance section.', cta: { label: 'Open Finance & Funding', href: '/finance' } }]
   },
   'executive-team': {
     title: 'Executive Team', kicker: 'How HUA works', image: '/hua-assets/structure.webp',
@@ -60,7 +103,7 @@ export const huaPages: Record<string, HuaPage> = {
         { title: 'Joshua Lee & Sarah Anschell', eyebrow: 'Co-VPs of Civic Engagement' },
         { title: 'Annabella Burton Boone', eyebrow: 'VP of Special Projects' }
       ]},
-      { title: 'Join the Cabinet', text: 'Cabinet applications are open through the official HUA application form.', cta: { label: 'Open the Cabinet application', href: 'https://docs.google.com/forms/d/e/1FAIpQLSdSa-5bn-3_Ip_K4-FT3SnUy1zojCZoDMzMN9W05UcMmMjdXQ/viewform?usp=dialog' } },
+      { title: 'Join the Cabinet', text: 'All HUA applications use one common application.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } },
       { title: 'Get in touch', text: 'Questions for the Executive Team can be sent to copresidents@thehua.org.', cta: { label: 'Email the Co-Presidents', href: 'mailto:copresidents@thehua.org' } }
     ]
   },
@@ -73,6 +116,7 @@ export const huaPages: Record<string, HuaPage> = {
         { title: 'Lead a solution', eyebrow: '02', text: 'Bring forward a problem, shape a plan, and organize a project with officer support.' },
         { title: 'Share an idea', eyebrow: '03', text: 'Not ready to lead? Help the right team understand an issue and contribute when you can.' }
       ]},
+      { title: 'Apply', text: 'The previous handbook has been retired. Use the common HUA application for every team and cabinet role.', cta: { label: 'Open the common application', href: COMMON_APPLICATION_URL } },
       { title: 'Built for participation', text: 'HUA is designed around action, openness, and the belief that students closest to a problem should help shape the response.', cta: { label: 'Find your team', href: '/teams-and-contacts/' } }
     ]
   },
@@ -80,12 +124,11 @@ export const huaPages: Record<string, HuaPage> = {
     title: 'Calendar', kicker: 'Meetings & events', image: '/hua-assets/instagram-bg.webp',
     intro: 'HUA meetings are open to Harvard College undergraduates. Come listen, contribute, or connect with an officer.',
     sections: [
-      { title: 'Recent event', cards: [
-        { title: 'HUA General Meeting', eyebrow: 'August 30, 2026 · 12–1 PM', text: 'Organization-wide updates, discussion, and time for students to bring forward campus concerns.', link: 'https://www.thehua.org/calendar/hua-general-meeting-3', label: 'View event details' },
-        { title: 'Team meetings', eyebrow: 'Issue-focused', text: 'Working sessions for academics, residential life, social life, sports, well-being, and more.' },
-        { title: 'Community events', eyebrow: 'Campus-wide', text: 'Information sessions, welcome events, and programs organized with student groups.' }
+      { title: 'Current events', cards: [
+        { title: 'HUA General Meeting', eyebrow: 'Sunday, September 13, 2026', text: 'Open to all Harvard College undergraduates. Time and location will be posted when confirmed.' },
+        { title: 'HUA Civility Event', eyebrow: 'September 2026', text: 'A campus conversation centered on constructive dialogue and community. Event details will be posted when confirmed.' }
       ]},
-      { title: 'Planning a visit?', text: 'Meeting details and locations can change. The official calendar has the latest schedule and event details.', cta: { label: 'View the live HUA calendar', href: 'https://www.thehua.org/calendar' } }
+      { title: 'Updates', text: 'This calendar intentionally contains only current events. Future events will be added as details are officially announced.', cta: { label: 'Ask about an event', href: 'mailto:copresidents@thehua.org' } }
     ]
   },
   'governing-docs': {
@@ -93,20 +136,20 @@ export const huaPages: Record<string, HuaPage> = {
     intro: 'The documents that define HUA’s responsibilities, decision-making practices, and standards for fair participation.',
     sections: [{ title: 'Document library', cards: [
       { title: 'Constitution & Bylaws', eyebrow: 'Foundation', text: 'The organization’s authority, structure, responsibilities, and amendment process.', link: 'https://docs.google.com/document/d/1OkwkJenKI9kRywA1fZyyjdSipJ-oiVQ-Ub-R-Z6Cflc/edit?usp=sharing', label: 'Open document' },
-      { title: 'General Meeting Guidelines', eyebrow: 'Participation', text: 'Shared expectations for accessible, productive, and accountable meetings.', link: 'https://docs.google.com/document/d/1zJcbTh2pL_4tg29z_ozNi7WUUHkvQlgWqHcd4OxrZt4/edit?usp=sharing', label: 'Open document' },
+      { title: 'General Meeting Guidelines', eyebrow: 'Revision requested', text: 'The published copy is dated 2022–2023. A current version has been requested from the Co-Presidents.', link: 'mailto:copresidents@thehua.org?subject=Current%20General%20Meeting%20Guidelines', label: 'Request the current version' },
       { title: 'Election Commission Guidelines', eyebrow: 'Elections', text: 'Standards for administration, neutrality, candidate access, and dispute resolution.', link: 'https://docs.google.com/document/d/1Is-ab0PZwPB95tKRzkXSxD0X5EOCbGNx3NLc8UsE1pI/edit?usp=sharing', label: 'Open document' }
     ]}]
   },
   'hua-semesterly-grant-opening': {
     title: 'Semesterly Grants', kicker: 'Club funding', image: '/hua-assets/meeting.webp',
-    intro: 'A starting point for student organizations preparing for the HUA semesterly grant process.',
+    intro: 'Fall 2026 grant applications are coming soon.',
     sections: [
       { title: 'Before you apply', list: ['Review the current finance guidelines.', 'Confirm that your organization is eligible and in good standing.', 'Prepare an itemized budget and funding supplement.', 'Track deadlines and retain receipts for every approved expense.'] },
-      { title: 'Funding hub', text: 'Cycle status and deadlines change during the year. Use the local funding pages to understand requirements and prepare your materials.', cta: { label: 'Grant information', href: '/club-funding/grant-information/' } }
+      { title: 'Fall 2026 status', text: 'Applications are not open yet. Dates will be posted by the Finance Team when confirmed.', cta: { label: 'Prepare in the funding hub', href: '/grant-information' } }
     ]
   },
   'election-guidelines': {
-    title: 'Election Guidelines', kicker: '2025–2026 academic year', image: '/hua-assets/widener.webp',
+    title: 'Election Guidelines', kicker: 'Current election information', image: '/hua-assets/widener.webp',
     intro: 'Clear campaign expectations help create a fair, respectful, and accessible election for every student.',
     sections: [
       { title: 'Campaign principles', cards: [
@@ -115,49 +158,42 @@ export const huaPages: Record<string, HuaPage> = {
         { title: 'Transparent process', eyebrow: '03', text: 'Rules, decisions, and enforcement should be documented and communicated consistently.' }
       ]},
       { title: 'Official regulations', text: 'Read the complete 2026 Spring Election campaign regulations before campaigning begins.', cta: { label: 'Open campaign regulations', href: 'https://docs.google.com/document/d/1Is-ab0PZwPB95tKRzkXSxD0X5EOCbGNx3NLc8UsE1pI/edit?usp=sharing' } },
+      { title: '2027 elections', text: 'The 2027 election guidelines will be published before those elections begin.' },
       { title: 'Questions or concerns', text: 'Election questions should be directed to the appropriate HUA election administrators before campaigning begins.', cta: { label: 'Contact HUA', href: 'mailto:copresidents@thehua.org' } }
     ]
-  },
-  newsroom: {
-    title: 'Newsroom', kicker: 'Updates from HUA', image: '/hua-assets/instagram-bg.webp',
-    intro: 'News, program announcements, funding updates, and stories about student-led work across Harvard College.',
-    sections: [{ title: 'Latest stories', cards: [
-      { title: 'HUA Weekly Newsletter', eyebrow: 'Newsletter', text: 'A concise roundup of opportunities, deadlines, events, and team updates.', link: 'https://drive.google.com/file/d/1bdKR8wMzOG07lghaGy1wvrTUu3srCXjB/view?usp=sharing', label: 'Read the newsletter' },
-      { title: 'Semesterly Grant Launch', eyebrow: 'Finance', text: 'What student organizations need to know before beginning a funding application.', link: '/club-funding/grant-information/', label: 'Read funding guidance' },
-      { title: 'What You Haven’t Heard', eyebrow: 'Campus impact', text: 'A look at the programs and partnerships happening behind the scenes.', link: 'https://www.thehua.org/what-you-havent-heard', label: 'Read the stories' }
-    ]}]
   },
   'teams-and-contacts': {
     title: 'Teams & Contacts', kicker: 'Find the right people', image: '/hua-assets/executive.webp',
     intro: 'Start with the issue area closest to your question. Every team welcomes thoughtful input from students.',
     sections: [{ title: 'HUA teams', cards: [
-      { title: 'Academic Life', eyebrow: 'Courses & learning', meta: 'academics@thehua.org' }, { title: 'Social Life', eyebrow: 'Campus connection', meta: 'social-life@thehua.org' },
-      { title: 'Sports', eyebrow: 'Athletics & recreation', meta: 'sports@thehua.org' }, { title: 'Well-Being', eyebrow: 'Student support', meta: 'well-being@thehua.org' },
-      { title: 'Residential Life', eyebrow: 'Housing & community', meta: 'residential-life@thehua.org' }, { title: 'Extracurriculars', eyebrow: 'Clubs & activities', meta: 'extracurriculars@thehua.org' },
-      { title: 'Finance', eyebrow: 'Funding & receipts', meta: 'treasurer@thehua.org' }, { title: 'Executive Team', eyebrow: 'General inquiries', meta: 'copresidents@thehua.org' }
+      { title: 'Academic Life · Maritella Petsa', eyebrow: 'Courses & learning', meta: 'academics@thehua.org', link: '/academic-team', label: 'Team page' }, { title: 'Social Life · Asante Kiio', eyebrow: 'Campus connection', meta: 'social-life@thehua.org', link: '/social-life-team', label: 'Team page' },
+      { title: 'Sports · Ella McRitchie', eyebrow: 'Athletics & recreation', meta: 'sports@thehua.org', link: '/sports-team', label: 'Team page' }, { title: 'Well-Being · Tess Sumner', eyebrow: 'Student support', meta: 'well-being@thehua.org', link: '/well-being-team', label: 'Team page' },
+      { title: 'Residential Life · Finn Berard', eyebrow: 'Housing & community', meta: 'residential-life@thehua.org', link: '/residential-life-team', label: 'Team page' }, { title: 'Extracurriculars · Adam Han', eyebrow: 'Clubs & activities', meta: 'extracurriculars@thehua.org', link: '/extracurriculars-team', label: 'Team page' },
+      { title: 'Inclusion · Officer TBD', eyebrow: 'Snap election pending', link: '/inclusion-team', label: 'Team page' }, { title: 'Finance · Jake Marino & Polina Krumkachev', eyebrow: 'Funding & receipts', meta: 'treasurer@thehua.org', link: '/finance-team', label: 'Team page' }, { title: 'Executive Team', eyebrow: 'General inquiries', meta: 'copresidents@thehua.org' }
     ]}]
-  },
-  'crimson-career-closet': {
-    title: 'Crimson Career Closet', kicker: 'Dress with confidence', image: '/hua-assets/improve.webp',
-    intro: 'Free professional clothing rentals help Harvard College students show up prepared for interviews, presentations, and career events.',
-    sections: [
-      { title: 'How it works', cards: [
-        { title: 'Browse', eyebrow: '01', text: 'Explore available sizes, colors, and professional styles.', link: 'https://www.thehua.org/crimson-career-closet-clothing', label: 'Preview the collection' },
-        { title: 'Reserve', eyebrow: '02', text: 'Schedule a time to visit, try on pieces, and choose what works.', link: 'https://app.squarespacescheduling.com/schedule.php?owner=28362411', label: 'Schedule an appointment' },
-        { title: 'Return', eyebrow: '03', text: 'Bring items back in the same condition after a rental of up to two weeks.' }
-      ]},
-      { title: 'Questions & donations', text: 'The collection evolves throughout the year. For appointments, help, or clothing donations, email careercloset@thehua.org.', cta: { label: 'Email the closet team', href: 'mailto:careercloset@thehua.org' } }
-    ]
   },
   'harvard-guides': {
     title: 'Harvard Guides', kicker: 'Navigate campus', image: '/hua-assets/guides.webp',
-    intro: 'A practical starting point for finding the systems, spaces, and communities that shape undergraduate life.',
+    intro: 'A concise, current set of official tools for navigating Harvard academics and reserving campus space.',
     sections: [{ title: 'Explore by topic', cards: [
-      { title: 'Harvard terms & acronyms', eyebrow: 'Start here', text: 'Common abbreviations, campus destinations, and everyday Harvard references.', link: 'https://college.harvard.edu/guides/harvard-terms-and-acronyms', label: 'Open the guide' },
-      { title: 'Courses & reviews', eyebrow: 'Learn', text: 'Register on my.harvard and use the Q Guide to learn from prior student feedback.', link: 'https://qreports.fas.harvard.edu/', label: 'Open the Q Guide' },
-      { title: 'Club meeting spaces', eyebrow: 'Participate', text: 'Find and reserve spaces for recognized student organizations.', link: 'https://roombook.harvard.edu/', label: 'Open RoomBook' },
-      { title: 'Study spaces', eyebrow: 'Connect', text: 'Find bookable and open spaces across the Harvard Library system.', link: 'https://library.harvard.edu/spaces', label: 'Find a space' }
+      { title: 'Harvard Terms & Acronyms', eyebrow: 'Harvard guide', text: 'A current guide to common Harvard terminology, offices, and locations.', link: 'https://college.harvard.edu/guides/harvard-terms-and-acronyms', label: 'Open the Harvard guide' },
+      { title: 'Q Guide', eyebrow: 'Course reviews', text: 'Read student feedback and course evaluation results.', link: 'https://qreports.fas.harvard.edu/', label: 'Open the Q Guide' },
+      { title: 'Book a room', eyebrow: 'RoomBook', text: 'One consolidated starting point for reserving FAS spaces with your HarvardKey.', link: 'https://roombook.harvard.edu/request-room', label: 'View room-booking instructions' },
+      { title: 'Student-friendly spots', eyebrow: 'Study & gather', text: 'A short, maintained list of reliable places to study, meet, and recharge around campus.', link: '/spots', label: 'Browse campus spots' }
     ]}, { title: 'Help improve this guide', text: 'Know a resource that should be included? Send your suggestion to copresidents@thehua.org.', cta: { label: 'Suggest a resource', href: 'mailto:copresidents@thehua.org' } }]
+  },
+  spots: {
+    title: 'Campus Spots', kicker: 'Study, meet & recharge', image: '/hua-assets/widener.webp',
+    intro: 'A practical starting list of dependable campus spaces, with official tools for checking current hours and amenities.',
+    sections: [
+      { title: 'Places to start', cards: [
+        { title: 'Lamont Library', eyebrow: 'Late-night study', text: 'A central option for individual work, group study, printing, and late-night access. Check current hours before visiting.', link: 'https://library.harvard.edu/libraries/lamont', label: 'Check Lamont details' },
+        { title: 'Smith Campus Center', eyebrow: 'Meet & recharge', text: 'Indoor and outdoor common space for informal meetings, meals, and time between classes.', link: 'https://commonspaces.harvard.edu/smith-campus-center', label: 'Explore the Smith Center' },
+        { title: 'Science Center', eyebrow: 'Central & practical', text: 'A convenient crossroads with study tables, food nearby, and easy access from the Yard.', link: 'https://map.harvard.edu/?bld=04420', label: 'Open the campus map' },
+        { title: 'Harvard Library spaces', eyebrow: 'Find your fit', text: 'Filter official library spaces by noise level, furniture, accessibility, and available equipment.', link: 'https://library.harvard.edu/services-tools/find-space', label: 'Find a library space' }
+      ]},
+      { title: 'Keep it current', text: 'Hours, access rules, and room availability can change. Use the linked official pages before making plans, and send corrections or additions to the HUA.', cta: { label: 'Suggest a spot', href: 'mailto:copresidents@thehua.org?subject=Campus%20Spots%20Suggestion' } }
+    ]
   },
   'hua-logos': {
     title: 'HUA Logos', kicker: 'Brand resources', image: '/hua-assets/widener.webp',
@@ -169,8 +205,8 @@ export const huaPages: Record<string, HuaPage> = {
     intro: 'Budgets, reports, and procedures that help students understand how HUA resources support campus life.',
     sections: [
       { title: 'Financial overview', cards: [
-        { title: 'Current budget', eyebrow: 'FY2025', text: 'An active view of planned allocations, expenditures, and program support.' },
-        { title: 'Year-end reporting', eyebrow: 'FY2024', text: 'Final budget and profit-and-loss records from the completed fiscal year.' },
+        { title: 'Current budget', eyebrow: 'Date TBD', text: 'An active view of planned allocations, expenditures, and program support.' },
+        { title: 'Year-end reporting', eyebrow: 'Date TBD', text: 'Final budget and profit-and-loss records from the latest completed fiscal year.' },
         { title: 'Policies & procedures', eyebrow: 'Governance', text: 'Finance guidelines, internal procedures, and constitutional requirements.' }
       ]},
       { title: 'Ask a question', text: 'The Co-Treasurers welcome questions about budgets, funding decisions, and financial procedures.', cta: { label: 'Email the Co-Treasurers', href: 'mailto:treasurer@thehua.org' } }

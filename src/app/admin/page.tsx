@@ -178,7 +178,7 @@ export default function AdminPage() {
   const [statsError, setStatsError] = useState(false);
 
   // Budget
-  const [budget, setBudget] = useState<BudgetConfig>({ embedCode: "", yearLabel: "Academic Year 2024–25 · Last updated June 2025" });
+  const [budget, setBudget] = useState<BudgetConfig>({ embedCode: "", yearLabel: "Academic year and update date: TBD" });
 
   // Instagram
   const [instagram, setInstagram] = useState<InstagramConfig>(DEFAULT_INSTAGRAM);
@@ -759,11 +759,11 @@ export default function AdminPage() {
                             <div className="grid sm:grid-cols-2 gap-4 pt-6">
                               <div className="flex flex-col gap-1.5">
                                 <label className="text-xs font-semibold text-[#6b7280] uppercase tracking-wide">Table Title</label>
-                                <input type="text" value={semData.title} onChange={(e) => updateTimelineField(sem, "title", e.target.value)} placeholder="e.g. Fall 2025 Grant Cycles" className="w-full px-4 py-3 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent" />
+                                <input type="text" value={semData.title} onChange={(e) => updateTimelineField(sem, "title", e.target.value)} placeholder="e.g. Fall 2026 Grant Cycles" className="w-full px-4 py-3 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent" />
                               </div>
                               <div className="flex flex-col gap-1.5">
                                 <label className="text-xs font-semibold text-[#6b7280] uppercase tracking-wide">Semesterly Column Label</label>
-                                <input type="text" value={semData.semesterlyLabel} onChange={(e) => updateTimelineField(sem, "semesterlyLabel", e.target.value)} placeholder="e.g. Fall 2025 Semesterly" className="w-full px-4 py-3 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent" />
+                                <input type="text" value={semData.semesterlyLabel} onChange={(e) => updateTimelineField(sem, "semesterlyLabel", e.target.value)} placeholder="e.g. Fall 2026 Semesterly" className="w-full px-4 py-3 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent" />
                               </div>
                             </div>
                             <div className="flex flex-col gap-4">
@@ -1039,7 +1039,7 @@ export default function AdminPage() {
                               const next = stats.cards.map((c, j) => j === i ? { ...c, sub: e.target.value } : c) as StatsConfig["cards"];
                               setStats({ cards: next }); setStatsSaved(false);
                             }}
-                            placeholder="e.g. Academic year 2024–25"
+                            placeholder="e.g. Academic year: TBD"
                             className="w-full px-4 py-3 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent"
                           />
                         </div>
@@ -1160,7 +1160,7 @@ export default function AdminPage() {
                                   type="text"
                                   value={report.title}
                                   onChange={(e) => { setReportsList((prev) => prev.map((r) => r.id === report.id ? { ...r, title: e.target.value } : r)); setReportsSaved(false); }}
-                                  placeholder="e.g. Fall 2024 Semester Budget Report"
+                                  placeholder="e.g. Fall Semester Budget Report"
                                   className="w-full px-4 py-2.5 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent"
                                 />
                               </div>
@@ -1180,7 +1180,7 @@ export default function AdminPage() {
                                   type="text"
                                   value={report.semester}
                                   onChange={(e) => { setReportsList((prev) => prev.map((r) => r.id === report.id ? { ...r, semester: e.target.value } : r)); setReportsSaved(false); }}
-                                  placeholder="e.g. Fall 2024"
+                                  placeholder="e.g. Fall semester"
                                   className="w-full px-4 py-2.5 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent"
                                 />
                               </div>
@@ -1335,7 +1335,7 @@ export default function AdminPage() {
                       type="text"
                       value={budget.yearLabel}
                       onChange={(e) => { setBudget((prev) => ({ ...prev, yearLabel: e.target.value })); setBudgetSaved(false); }}
-                      placeholder="Academic Year 2024–25 · Last updated June 2025"
+                      placeholder="Academic year and update date: TBD"
                       className="w-full px-4 py-3 rounded-xl border border-[#E8ECE7] text-[#222222] text-sm focus:outline-none focus:ring-2 focus:ring-[#1F5F0A] focus:border-transparent"
                     />
                     <p className="text-xs text-[#9CA3AF]">Shown beneath &quot;Budget Allocations&quot; on the Budget page.</p>

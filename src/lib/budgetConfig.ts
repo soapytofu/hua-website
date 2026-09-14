@@ -7,7 +7,7 @@ export interface BudgetConfig {
 
 export const DEFAULT_BUDGET: BudgetConfig = {
   embedCode: "",
-  yearLabel: "Academic Year 2024–25 · Last updated June 2025",
+  yearLabel: "Academic year and update date: TBD",
 };
 
 const BUDGET_KEY = "budget_config";
