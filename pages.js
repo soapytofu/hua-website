@@ -25,7 +25,7 @@ window.HUA_PAGES = {
         { title: 'Evan Epstein', eyebrow: 'Executive Vice President' },
         { title: 'Angela Yang & Sophie Zeng', eyebrow: 'Co-VPs of Technology' },
         { title: 'Luke Kim', eyebrow: 'VP of Photography' },
-        { title: 'Ryan Wang, Oliver Epstein & Marissa Gottman', eyebrow: 'Co-VPs of Social Media' },
+        { title: 'Oliver Epstein & Marissa Gottman', eyebrow: 'Co-VPs of Social Media' },
         { title: 'Matthew Tobin & Colin Chu', eyebrow: 'Co-VPs of Advocacy' },
         { title: 'Kevin Wu & Vy Le', eyebrow: 'Co-VPs of Communications' },
         { title: 'Eshaan Mani', eyebrow: 'VP of HUA History' },
